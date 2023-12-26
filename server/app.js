@@ -1,16 +1,20 @@
 const express = require('express')
 const cors = require('cors')
+const cookieParser = require('cookie-parser');
 const dotenv = require('dotenv').config({ path: 'config/config.env' });
 const port = process.env.PORT
+const errorMiddleware = require('./middleware/error')
+
 // Routes Imports
 const product = require('./routes/productRoute')
-const errorMiddleware = require('./middleware/error')
+const user = require('./routes/userRoutes')
 
 const app = express();
 
 
 app.use(express.json())
 app.use(cors());
+app.use(cookieParser());
 
 app.get('/', (req, res) => {
    res.send("<h1>Hello Wolrd<h1/>")
@@ -18,6 +22,7 @@ app.get('/', (req, res) => {
 
 
 app.use('/api/v1', product)
+app.use('/api/v1', user)
 
 // Error Handling \ Middleware
 app.use(errorMiddleware)

@@ -8,9 +8,9 @@ const connectDatabase = () => {
         .then(() => {
             console.log(`Database configured successfully`)
         })
-        // .catch((err) => {
-        //     console.log("Getting error while configuring database", err.message)
-        // })
+        .catch((err) => {
+            console.log("Getting error while configuring database", err.message)
+        })
 }
 
 module.exports  = connectDatabase;
