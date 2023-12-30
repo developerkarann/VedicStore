@@ -8,6 +8,7 @@ const errorMiddleware = require('./middleware/error')
 // Routes Imports
 const product = require('./routes/productRoute')
 const user = require('./routes/userRoutes')
+const order = require('./routes/orderRoute')
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/v1', product)
 app.use('/api/v1', user)
+app.use('/api/v1', order)
 
 // Error Handling \ Middleware
 app.use(errorMiddleware)
