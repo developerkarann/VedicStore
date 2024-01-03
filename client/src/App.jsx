@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/layout/header/Header'
 import Footer from './components/layout/footer/Footer'
 import Home from './components/layout/home/Home'
+import ProductDetails from './components/product/ProductDetails'
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Header />
         <Routes>
           <Route exact path='/' Component={Home} />
+          <Route exact path='/product/:id' Component={ProductDetails} />
 
         </Routes>
         <Footer />
