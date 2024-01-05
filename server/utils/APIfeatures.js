@@ -18,6 +18,8 @@ class ApiFeatures {
     }
 
     FilterFeature() {
+
+
         const queryCopy = { ...this.queryStr }
 
         // Removing some fiedls for category
@@ -25,7 +27,7 @@ class ApiFeatures {
 
         const removefields = ["keyword", "page", "limit"]
 
-        removefields.forEach((key => delete queryCopy[key]))
+        removefields.forEach((key) => delete queryCopy[key])
 
         //Filtering Price and rating
         // console.log(queryCopy)

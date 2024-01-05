@@ -11,11 +11,17 @@ import {
 } from '../constants/productConstants';
 import {backendServer} from '../constants/backendServer'
 
-export const getProduct = () => async (dispatch) => {
+export const getProduct = (keyword = "", currentPage=1 , category, ratings = 0) => async (dispatch) => {
     try {
         dispatch({ type: ALL_PRODUCT_REQUEST })
 
-        const { data } = await axios.get(`${backendServer}/api/v1/products`);
+        let link = `${backendServer}/api/v1/products?keyword=${keyword}&page=${currentPage}&ratings[gte]=${ratings}`
+
+        if(category){
+            link = `${backendServer}/api/v1/products?keyword=${keyword}&page=${currentPage}&category=${category}&ratings[gte]=${ratings}`
+        }
+
+        const { data } = await axios.get(link);
 
         dispatch({
             type: ALL_PRODUCT_SUCCESS,

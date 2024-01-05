@@ -20,6 +20,7 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-icons": "3.11",
+    "react-js-pagination": "^3.0.3",
     "react-material-ui-carousel": "^2.3.11",
     "react-rating-stars-component": "^2.2.0",
     "react-redux": "^9.0.4",

@@ -8,6 +8,7 @@ import Loader from '../layout/loader/Loader'
 import ReactStars from 'react-rating-stars-component'
 import ReviewCard from './ReviewCard'
 import { useAlert } from 'react-alert'
+import MetaData from '../layout/MetaData'
 
 
 export default function ProductDetails({ match }) {
@@ -39,6 +40,8 @@ export default function ProductDetails({ match }) {
         <>
             {loading ? <Loader /> :
                 <>
+                <MetaData title={`${product.name} -Ecommerce`}/>
+            
                     <div className="ProductDetails">
                         <div>
                             <Carousel>
@@ -70,7 +73,7 @@ export default function ProductDetails({ match }) {
                                 <div className="detailsBlock-3-1">
                                     <div className="detailsBlock-3-1-1">
                                         <button>-</button>
-                                        <input type="number" value="1" />
+                                        <input type="number" defaultValue="1" />
                                         <button>+</button>
                                     </div>{" "}
                                     <button>Add to Cart</button>
