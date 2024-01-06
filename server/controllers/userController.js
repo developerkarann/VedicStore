@@ -4,19 +4,25 @@ const User = require('../models/userModel')
 const sendToken = require('../utils/jwtToken')
 const sendEmail = require('../utils/sendEmail')
 const crypto = require('crypto');
-
+const cloudinary = require('cloudinary')
 
 
 // Register a user
 
 exports.registerUser = CatchAsyncError(async (req, res, next) => {
+
+    const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
+        folder: 'avatars',
+        width: 150,
+        crop: 'scale'
+    })
     const { name, email, password } = req.body;
 
     const user = await User.create({
         name, email, password,
-        avtar: {
-            public_id: 'sample id',
-            url: 'sample/url'
+        avatar: {
+            public_id: myCloud.public_id,
+            url: myCloud.url
         }
     });
 
@@ -193,7 +199,7 @@ exports.updateProfile = CatchAsyncError(async (req, res, next) => {
 })
 
 // Get All Users  --Admin
-exports.getAllUsers = CatchAsyncError(async(req,res,next)=>{
+exports.getAllUsers = CatchAsyncError(async (req, res, next) => {
 
     const users = await User.find();
 
@@ -204,10 +210,10 @@ exports.getAllUsers = CatchAsyncError(async(req,res,next)=>{
 })
 
 // Get Single User  --Admin
-exports.getSingleUser = CatchAsyncError(async(req,res,next)=>{
+exports.getSingleUser = CatchAsyncError(async (req, res, next) => {
 
     const user = await User.findById(req.params.id);
-    if(!user){
+    if (!user) {
         return next(new ErrorHandler(`User does not exits with id: ${req.params.id}`))
     }
     res.status(200).json({
@@ -239,10 +245,10 @@ exports.updateUserRole = CatchAsyncError(async (req, res, next) => {
 // Delete User --Admin
 exports.deleteUser = CatchAsyncError(async (req, res, next) => {
 
-   const user = await User.findById(req.params.id);
+    const user = await User.findById(req.params.id);
     //We Will remove clodinary Later
 
-    if(!user){
+    if (!user) {
         return next(new ErrorHandler(`User does not exits with id: ${req.params.id}`))
     }
 

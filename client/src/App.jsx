@@ -9,6 +9,7 @@ import Home from './components/layout/home/Home'
 import ProductDetails from './components/product/ProductDetails'
 import Products from './components/product/Products'
 import Search from './components/product/Search'
+import LoginSignUp from './components/User/LoginSignUp'
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Route exact path='/product/:id' Component={ProductDetails} />
           <Route path='/products/:keyword' Component={Products} />
           <Route exact path='/search' Component={Search} />
+          <Route exact path='/login' Component={LoginSignUp} />
 
         </Routes>
         <Footer />

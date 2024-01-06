@@ -4,6 +4,8 @@ const cookieParser = require('cookie-parser');
 const dotenv = require('dotenv').config({ path: 'config/config.env' });
 const port = process.env.PORT
 const errorMiddleware = require('./middleware/error')
+const bodyParser = require('body-parser')
+const fileUpload = require('express-fileupload')
 
 // Routes Imports
 const product = require('./routes/productRoute')
@@ -16,6 +18,8 @@ const app = express();
 app.use(express.json())
 app.use(cors());
 app.use(cookieParser());
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(fileUpload())
 
 app.get('/', (req, res) => {
    res.send("<h1>Hello Wolrd<h1/>")
