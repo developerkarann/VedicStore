@@ -1,8 +1,11 @@
 import React from 'react'
 import { ReactNavbar } from "overlay-navbar"
 import logo from '../../../assets/image/logo.png'
+import { useSelector } from 'react-redux'
+import UserOptions from './UserOptions'
 
 export default function Header() {
+  const { isAuthenticated, user } = useSelector((state) => state.user)
 
   const options = {
     burgerColorHover: "#eb4034",
@@ -40,6 +43,7 @@ export default function Header() {
   return (
     <>
       <ReactNavbar {...options}/>
+       {isAuthenticated && <UserOptions user={user} />}
     </>
   )
 }

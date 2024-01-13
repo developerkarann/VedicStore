@@ -36,7 +36,6 @@ export default function LoginSignUp() {
         e.preventDefault();
 
         dispatch(login(loginEmail, loginPassword))
-        // console.log("Login Form Submitted")
 
     }
     const [avatar, setAvatar] = useState()
@@ -52,7 +51,11 @@ export default function LoginSignUp() {
         myForm.set('password', password)
         myForm.set('avatar', avatar)
         dispatch(register(myForm))
-        console.log(" SignUp Form Submitted")
+        navigate("/account")
+        setTimeout(() => {
+            location.reload()
+        }, 6000);
+        // alert.success("Account Created! Please Login now (:")
     }
     const registerDataChange = (e) => {
         if (e.target.name === 'avatar') {
@@ -95,7 +98,9 @@ export default function LoginSignUp() {
         }
 
         if (isAuthenticated) {
-             navigate("/account")
+            navigate("/account")
+            // location.reload()
+            // alert.success('Login Successfully')
         }
     }, [dispatch, clearErrors, error, navigate, isAuthenticated])
 

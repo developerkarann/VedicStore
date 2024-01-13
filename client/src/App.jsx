@@ -10,6 +10,13 @@ import ProductDetails from './components/product/ProductDetails'
 import Products from './components/product/Products'
 import Search from './components/product/Search'
 import LoginSignUp from './components/User/LoginSignUp'
+import store from './store'
+import { loadUser } from './actions/userAction'
+import UserOptions from './components/layout/header/UserOptions'
+import { useSelector } from 'react-redux'
+import Profile from './components/User/Profile/Profile'
+import UpdateProfile from './components/User/Profile/UpdateProfile'
+
 
 
 function App() {
@@ -22,6 +29,8 @@ function App() {
     })
   }, [])
 
+  store.dispatch(loadUser())
+
   return (
     <>
       <Router>
@@ -33,7 +42,9 @@ function App() {
           <Route path='/products/:keyword' Component={Products} />
           <Route exact path='/search' Component={Search} />
           <Route exact path='/login' Component={LoginSignUp} />
-
+          <Route exact path='/account' Component={Profile} />
+          {/* <ProtectedRoute exact path='/account' Component={Profile} /> */}
+          <Route exact path='/me/update' Component={UpdateProfile} />
         </Routes>
         <Footer />
       </Router>

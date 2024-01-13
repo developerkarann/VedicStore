@@ -14,6 +14,7 @@ exports.registerUser = CatchAsyncError(async (req, res, next) => {
     const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
         folder: 'avatars',
         width: 150,
+        height: 150,
         crop: 'scale'
     })
     const { name, email, password } = req.body;
@@ -25,7 +26,7 @@ exports.registerUser = CatchAsyncError(async (req, res, next) => {
             url: myCloud.url
         }
     });
-
+    // console.log(user)
 
     sendToken(user, 201, res)
 })
@@ -51,6 +52,7 @@ exports.loginUser = CatchAsyncError(async (req, res, next) => {
         return next(new ErrorHandler('Invalid password', 401))
     }
 
+
     sendToken(user, 200, res)
 
 })
@@ -63,6 +65,10 @@ exports.logout = CatchAsyncError(async (req, res, next) => {
         expires: new Date(Date.now()),
         httpOnly: true
     })
+
+    // res.clearCookie("token")
+
+    // console.log("Logout function called in server")
 
     res.status(200).json({
         success: true,
@@ -145,10 +151,13 @@ exports.resetPassword = CatchAsyncError(async (req, res, next) => {
 
 //  >>>>>>>>
 
-//Get User Details
+//Get User Details 
 exports.getUserDetails = CatchAsyncError(async (req, res, next) => {
 
     const user = await User.findById(req.user.id)
+
+    // console.log(req.cookies.token)
+    // console.log("Get User Details Function Called")
 
     res.status(200).json({
         success: true,
@@ -180,12 +189,26 @@ exports.updatePassword = CatchAsyncError(async (req, res, next) => {
 // Update User Profile
 exports.updateProfile = CatchAsyncError(async (req, res, next) => {
 
-    const newUserData = {
+    let newUserData = {
         name: req.body.name,
         email: req.body.email,
     }
 
-    // We will cloudinary later
+    if (req.body.avatar !== "") {
+        const user = await User.findById(req.user.id)
+        const imageId = user.avatar.public_id;
+        await cloudinary.v2.uploader.destroy(imageId)
+        const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
+            folder: 'avatars',
+            width: 150,
+            height: 150,
+            crop: 'scale'
+        })
+        newUserData.avatar = {
+            public_id: myCloud.public_id,
+            url: myCloud.url,
+        };
+    }
 
     const user = await User.findByIdAndUpdate(req.user.id, newUserData, {
         new: true,
@@ -202,6 +225,8 @@ exports.updateProfile = CatchAsyncError(async (req, res, next) => {
 exports.getAllUsers = CatchAsyncError(async (req, res, next) => {
 
     const users = await User.find();
+
+
 
     res.status(200).json({
         success: true,

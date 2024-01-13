@@ -1,4 +1,3 @@
-
 const Product = require('../models/productModel');
 const ErrorHandler = require('../utils/errorHandler');
 const CatchAsyncError = require('../middleware/CatchAsyncError');
@@ -29,6 +28,7 @@ exports.getAllProduct = CatchAsyncError(async (req, res, next) => {
       .FilterFeature()
       .Pagination(resultPerPage);
    const products = await apiFeatures.query;
+
 
    res.status(200).json({
       success: true,
