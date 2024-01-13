@@ -1,9 +1,10 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { Route , redirect} from 'react-router-dom'
+import { Route , redirect, useNavigate} from 'react-router-dom'
 
 export default function ProtectedRoute({ component: Component, ...rest }) {
     const { user, loading, isAuthenticated } = useSelector((state) => state.user)
+    const navigate = useNavigate()
 
     return (
         <>
@@ -12,7 +13,8 @@ export default function ProtectedRoute({ component: Component, ...rest }) {
                     {...rest}
                     render={(props) => {
                         if (!isAuthenticated) {
-                            return redirect('/login')
+                            // return redirect('/login')
+                            return navigate('/login')
                         }
                         return <Component {...props} />
                     }}
