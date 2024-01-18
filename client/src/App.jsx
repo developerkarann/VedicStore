@@ -26,6 +26,7 @@ import ConfirmOrder from './components/Cart/ConfirmOrder'
 import Payment from './components/Cart/Payment'
 import ParentPayment from './components/Cart/ParentPayment'
 import OrderSuccess from './components/Cart/OrderSuccess'
+import MyOrders from './components/Order/MyOrders'
 
 
 
@@ -65,6 +66,7 @@ function App() {
           <Route exact path='/order/confirm' Component={ConfirmOrder} />
           <Route exact path='/process/payment' Component={ParentPayment} />
           <Route exact path='/success' Component={OrderSuccess} />
+          <Route exact path='/orders' Component={MyOrders} />
         </Routes>
         <Footer />
       </Router>
