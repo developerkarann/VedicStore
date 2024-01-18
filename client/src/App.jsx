@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.css'
 import WebFont from 'webfontloader'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
@@ -21,18 +21,25 @@ import UpdatePassword from './components/User/Password/UpdatePassword'
 import ForgotPassword from './components/User/Password/ForgotPassword'
 import ResetPassword from './components/User/Password/ResetPassword'
 import Cart from './components/Cart/Cart'
+import Shipping from './components/Cart/Shipping'
+import ConfirmOrder from './components/Cart/ConfirmOrder'
+import Payment from './components/Cart/Payment'
+import ParentPayment from './components/Cart/ParentPayment'
+import OrderSuccess from './components/Cart/OrderSuccess'
 
 
 
 function App() {
 
 
-  React.useEffect(() => {
+  useEffect(() => {
     WebFont.load({
       google: {
         families: ['Roboto', 'Droid', 'Chilanka']
       }
     })
+
+
   }, [])
 
   store.dispatch(loadUser())
@@ -49,12 +56,15 @@ function App() {
           <Route exact path='/search' Component={Search} />
           <Route exact path='/login' Component={LoginSignUp} />
           <Route exact path='/account' Component={Profile} />
-          {/* <ProtectedRoute exact path='/account' Component={Profile} /> */}
           <Route exact path='/me/update' Component={UpdateProfile} />
           <Route exact path='/password/update' Component={UpdatePassword} />
           <Route exact path='/password/forgot' Component={ForgotPassword} />
           <Route exact path='/password/reset/:token' Component={ResetPassword} />
           <Route exact path='/cart' Component={Cart} />
+          <Route exact path='/login/shipping' Component={Shipping} />
+          <Route exact path='/order/confirm' Component={ConfirmOrder} />
+          <Route exact path='/process/payment' Component={ParentPayment} />
+          <Route exact path='/success' Component={OrderSuccess} />
         </Routes>
         <Footer />
       </Router>

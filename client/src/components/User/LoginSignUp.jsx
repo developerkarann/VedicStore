@@ -91,6 +91,8 @@ export default function LoginSignUp() {
         }
     }
 
+    const redirect = location.search ? location.search.split('=')[1] : '/account';
+
     useEffect(() => {
         if (error) {
             alert.error(error)
@@ -98,11 +100,10 @@ export default function LoginSignUp() {
         }
 
         if (isAuthenticated) {
-            navigate("/account")
-            // location.reload()
-            // alert.success('Login Successfully')
+            navigate(redirect)
+        
         }
-    }, [dispatch, clearErrors, error, navigate, isAuthenticated])
+    }, [dispatch, clearErrors, error, navigate, isAuthenticated , redirect])
 
     return (
         <>

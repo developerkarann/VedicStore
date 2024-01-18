@@ -3,6 +3,7 @@ const port = process.env.PORT
 // configration
 const connectDatabase = require('./config/database')
 const cloudinary = require('cloudinary');
+const dotenv = require('dotenv').config({ path: 'config/config.env' });
 
 // Uncought Error Handling
 process.on('uncaughtException', (err) => {

@@ -1,15 +1,17 @@
 import React from 'react'
-import './cart.css'
+import './css/cart.css'
 import CartItemCard from './CartItemCard'
 import { useDispatch, useSelector } from 'react-redux'
 import { addItemsToCart, removeItemsFromCart } from '../../actions/cartAction'
 import { useAlert } from 'react-alert';
 import RemoveShoppingCartIcon from '@material-ui/icons/RemoveShoppingCart'
 import { Typography } from '@material-ui/core'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import MetaData from '../layout/MetaData'
 
 export default function Cart() {
     const dispatch = useDispatch()
+    const navigate = useNavigate()
     const alert = useAlert()
     const { cartItems } = useSelector((state) => state.cart)
 
@@ -32,15 +34,13 @@ export default function Cart() {
         dispatch(removeItemsFromCart(id))
         alert.success('Item Removed ')
     }
-    const item = {
-        product: 'ProductID',
-        price: 2000,
-        name: 'Asus Tuff Gaming',
-        quantity: 1,
-        image: 'https://i.ibb.co/DRST11n/1.webp'
+
+    const checkOutHandler = () => {
+        navigate('/login?redirect=shipping')
     }
     return (
         <>
+            <MetaData title="Cart - Ecommerce" />
             {cartItems.length === 0 ?
                 <>
                     <div className="emptyCart">
@@ -51,6 +51,7 @@ export default function Cart() {
                 </>
                 :
                 <>
+
                     <div className="cartPage">
                         <div className="cartHeader">
                             <p>Product</p>
@@ -58,8 +59,8 @@ export default function Cart() {
                             <p>Subtotal</p>
                         </div>
 
-                        {cartItems && cartItems.map((item) => (
-                            <div className="cartContainer">
+                        {cartItems && cartItems.map((item, index) => (
+                            <div className="cartContainer" key={index}>
                                 <CartItemCard item={item} deletecartItem={deletecartItem} key={item.id} />
                                 <div className="cartInput">
                                     <button onClick={() => decreaseQuantity(item.product, item.quantity)}>-</button>
@@ -76,13 +77,13 @@ export default function Cart() {
                                 <div className="cartGrossTotalBox">
                                     <p>Gross Total</p>
                                     <p>{`₹${cartItems.reduce(
-                                        (acc,item)=> acc + item.quantity * item.price, 0
+                                        (acc, item) => acc + item.quantity * item.price, 0
                                     )}`}</p>
                                 </div>
                             </div>
                             <div></div>
                             <div className='checkOutBtn'>
-                                <button>Check Out</button>
+                                <button onClick={checkOutHandler}>Check Out</button>
                             </div>
                         </div>
                     </div>

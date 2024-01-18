@@ -1,5 +1,5 @@
 import React from 'react'
-import './cartitemcard.css'
+import './css/cartitemcard.css'
 import { Link } from 'react-router-dom'
 
 export default function CartItemCard({ item , deletecartItem}) {
