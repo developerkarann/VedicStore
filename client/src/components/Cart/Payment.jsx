@@ -96,6 +96,8 @@ export default function Payment() {
 
                     dispatch(createOrder(order))
 
+                    console.log(order)
+
                     navigate('/success')
                 } else {
                     alert.error('There is some issue while processing payment')

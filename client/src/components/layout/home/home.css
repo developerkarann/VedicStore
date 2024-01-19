@@ -86,9 +86,10 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    align-items: center;
 }
 
-.productCard>div>span {
+.ProductCardSpan {
     margin-left: 1.5vmax;
     font: 300 0.7vmax "Roboto";
 }

@@ -16,7 +16,7 @@ export const newOrderReducer = (state = {}, action) => {
         case CREATE_ORDER_REQUEST:
             return {
                 ...state,
-                loading: truem
+                loading: true
             }
         case CREATE_ORDER_SUCCESS:
             return {

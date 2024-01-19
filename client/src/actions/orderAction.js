@@ -3,7 +3,7 @@ import { backendServer } from '../constants/backendServer'
 import { CLEAR_ERRORS, CREATE_ORDER_REQUEST, CREATE_ORDER_SUCCESS, CREATE_ORDER_FAIL, MY_ORDER_REQUEST, MY_ORDER_SUCCESS, MY_ORDER_FAIL, ORDER_DETAILS_REQUEST, ORDER_DETAILS_SUCCESS, ORDER_DETAILS_FAIL } from "../constants/orderConstants";
 
 // Create Order 
-export const createOrder = (order) => async (dispatch, getState) => {
+export const createOrder = (order) => async (dispatch) => {
     try {
         dispatch({ type: CREATE_ORDER_REQUEST })
 
@@ -16,7 +16,7 @@ export const createOrder = (order) => async (dispatch, getState) => {
     } catch (error) {
         dispatch({
             type: CREATE_ORDER_FAIL,
-            payload: error.response.data.message
+            payload: error.message
         });
     }
 };
