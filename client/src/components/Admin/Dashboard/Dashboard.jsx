@@ -34,6 +34,11 @@ export default function Dashboard() {
     }
   })
 
+  let totalAmount = 0;
+  orders && orders.forEach((item)=>{
+    totalAmount += item.totalPrice
+  })
+
   const navigate = useNavigate();
 
   Chart.register(...registerables);
@@ -45,7 +50,7 @@ export default function Dashboard() {
         label: 'TOTAL AMOUNT',
         backgroundColor: ['tomato'],
         hoverBackgroundColor: ['rgba(197,72,49'],
-        data: [0, 4000],
+        data: [0, totalAmount],
       }
     ]
   }
@@ -60,6 +65,8 @@ export default function Dashboard() {
       }
     ]
   }
+
+  
 
   useEffect(() => {
     if (user && user.role === 'user') {
@@ -87,7 +94,7 @@ export default function Dashboard() {
               <Typography component="h1" >Dashboard</Typography>
               <div className="dashboardSummary">
                 <div>
-                  <p>Total Amount <br /> 2000</p>
+                  <p>Total Amount <br /> {totalAmount}</p>
                 </div>
 
                 <div className="dashboardSummaryBox2">
