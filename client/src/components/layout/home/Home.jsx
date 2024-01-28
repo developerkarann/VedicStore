@@ -6,13 +6,14 @@ import MetaData from '../MetaData'
 import { clearErrors, getProduct } from '../../../actions/productAction'
 import { useSelector, useDispatch } from 'react-redux'
 import Loader from '../loader/Loader'
-import {useAlert} from 'react-alert'
+import { useAlert } from 'react-alert'
+import logoImg from '../../../assets/image/logo.png'
 
 export default function Home() {
 
   const dispatch = useDispatch();
   const { loading, error, products } = useSelector(state => state.products)
-  const alert= useAlert()
+  const alert = useAlert()
 
 
   useEffect(() => {
@@ -21,20 +22,24 @@ export default function Home() {
       dispatch(clearErrors)
     }
     dispatch(getProduct());
-  }, [dispatch,error,alert])
+  }, [dispatch, error, alert])
 
 
 
   return (
     <>
-      {loading ? <Loader/> :
+      {loading ? <Loader /> :
         <>
           <MetaData title="Home - Ecommerce" />
           <div className="banner">
-            <p>Welcome To E-Commerce</p>
+            <p>Welcome To</p>
+            <img src={logoImg} alt="" className='logoImg' />
             <h1>FIND AMAZING PRODUCTS BELOW </h1>
             <a href="#container">
-              <button>Scroll <CgMouse /> </button>
+              {/* <button>Scroll <CgMouse /> </button> */}
+                <button class="btn"><i class="animation"></i> Scroll <CgMouse/>  <i class="animation"></i>
+                </button>
+
             </a>
           </div>
 

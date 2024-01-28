@@ -42,7 +42,7 @@ export default function LoginSignUp() {
     const [avatarPreview, setAvatarPreview] = useState("./profile.png")
 
     const registerSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault()
 
         const myForm = new FormData();
 
@@ -50,11 +50,14 @@ export default function LoginSignUp() {
         myForm.set('email', email)
         myForm.set('password', password)
         myForm.set('avatar', avatar)
+
+        console.log(myForm)
         dispatch(register(myForm))
-        navigate("/account")
-        setTimeout(() => {
-            location.reload()
-        }, 6000);
+
+        // navigate("/account")
+        // setTimeout(() => {
+        //     location.reload()
+        // }, 6000);
         // alert.success("Account Created! Please Login now (:")
     }
     const registerDataChange = (e) => {
@@ -101,9 +104,10 @@ export default function LoginSignUp() {
 
         if (isAuthenticated) {
             navigate(redirect)
-        
+            // navigate('/account')
+
         }
-    }, [dispatch, clearErrors, error, navigate, isAuthenticated , redirect])
+    }, [dispatch, clearErrors, error, navigate, isAuthenticated, redirect])
 
     return (
         <>

@@ -92,13 +92,17 @@ exports.updateOrderStatus = CatchAsyncError(async (req, res, next) => {
         return next(new ErrorHandler('Order not found with this id', 404))
     }
 
-    if (order.orderStatus === 'Delivered' || order.orderStatus === 'delivered' ) {
+    if (order.orderStatus === 'Delivered' || order.orderStatus === 'Delivered') {
         return next(new ErrorHandler('You have already delivered this order', 404))
     }
+    
+    if (req.body.status === 'Shipped') {
+        order.orderItems.forEach(async od => {
+            await updateStock(od.product, od.quantity)
+        })
+    }
 
-    order.orderItems.forEach(async od => {
-        await updateStock(od.product, od.quantity)
-    })
+
 
     order.orderStatus = req.body.status;
 

@@ -89,7 +89,7 @@
     border: 1px solid rgba(0, 0, 0, 0.123);
 }
 
-@media screen and(max-width: 600px) {
+@media screen and(max-width: 750px) {
     .filterBox{
         width: 20vmax;
         background-color: red;

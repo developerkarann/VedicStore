@@ -26,7 +26,7 @@ exports.registerUser = CatchAsyncError(async (req, res, next) => {
             url: myCloud.url
         }
     });
-    // console.log(user)
+    console.log(user)
 
     sendToken(user, 201, res)
 })
@@ -197,14 +197,18 @@ exports.updateProfile = CatchAsyncError(async (req, res, next) => {
 
     if (req.body.avatar !== "") {
         const user = await User.findById(req.user.id)
+
         const imageId = user.avatar.public_id;
+
         await cloudinary.v2.uploader.destroy(imageId)
+
         const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
             folder: 'avatars',
             width: 150,
             height: 150,
             crop: 'scale'
         })
+
         newUserData.avatar = {
             public_id: myCloud.public_id,
             url: myCloud.url,
@@ -272,16 +276,19 @@ exports.updateUserRole = CatchAsyncError(async (req, res, next) => {
 exports.deleteUser = CatchAsyncError(async (req, res, next) => {
 
     const user = await User.findById(req.params.id);
-    //We Will remove clodinary Later
 
     if (!user) {
         return next(new ErrorHandler(`User does not exits with id: ${req.params.id}`))
     }
+    // remove clodinary
+    const imageId = user.avatar.public_id;
+
+    await cloudinary.v2.uploader.destroy(imageId)
 
     await user.deleteOne();
 
     res.status(200).json({
-        success: true,
+        // success: true,
         message: 'User Deleted Successfully'
     })
 })

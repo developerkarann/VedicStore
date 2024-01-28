@@ -47,6 +47,7 @@
     margin: 4vmax;
     text-align: center;
     transition: all 0.5s;
+    border-radius: 5px;
 }
 
 .profileContainer>div:first-child>a:hover {
@@ -87,6 +88,7 @@
     transition: all 0.5s;
     margin: 1vmax 0;
     padding: 0.5vmax;
+    border-radius: 5px;
 }
 
 .profileContainer>div:last-child>div:last-child>a:hover {

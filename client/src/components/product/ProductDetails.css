@@ -148,8 +148,9 @@
     display: flex;
     flex-direction: column;
 }
-.submitDialogTextarea{
-    border: 1px solid rgba(0,0,0,0.080);
+
+.submitDialogTextarea {
+    border: 1px solid rgba(0, 0, 0, 0.080);
     margin: 1vmax 0;
     outline: none;
     padding: 1rem;
@@ -208,8 +209,7 @@
 
 
 
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
     .ProductDetails {
         flex-direction: column;
         height: unset;
@@ -287,5 +287,13 @@
         padding: 1vmax;
         width: 15vmax;
         margin: 3vmax 0;
+    }
+
+    .reviewCard>p {
+        font: 600 2vw 'Roboto';
+    }
+
+    .reviewCardComment {
+        font: 300 3vw cursive
     }
 }

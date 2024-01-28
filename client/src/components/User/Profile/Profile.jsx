@@ -18,26 +18,26 @@ export default function Profile() {
         <>
             {loading ? <Loader /> : (
                 <>
-                    <MetaData title={`${user.name}'s Profile`} />
+                    <MetaData title={`${user && user.name}'s Profile`} />
 
                     <div className="profileContainer">
                         <div>
                             <h1>My Profile</h1>
-                            <img src={user.avatar.url} alt={user.name} />
+                            <img src={user && user.avatar.url} alt={user && user.name} />
                             <Link to="/me/update">Edit Profile</Link>
                         </div>
                         <div>
                             <div>
                                 <h4>Full Name</h4>
-                                <p>{user.name}</p>
+                                <p>{user && user.name}</p>
                             </div>
                             <div>
                                 <h4>Email</h4>
-                                <p>{user.email}</p>
+                                <p>{user && user.email}</p>
                             </div>
                             <div>
                                 <h4>Joined on</h4>
-                                <p>{String(user.createdAt).substring(0, 10)}</p>
+                                <p>{String( user && user.createdAt).substring(0, 10)}</p>
                             </div>
 
                             <div>

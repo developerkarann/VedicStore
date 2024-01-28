@@ -66,7 +66,7 @@ export default function OrderDetails() {
                                     <Typography>Order Status</Typography>
                                     <div className="orderDetailsContainerBox">
                                         <div>
-                                            <p className={order.paymentStatus === 'succeeded' ? 'greenColor' : 'redColor'}>
+                                            <p className={order.orderStatus === 'Delivered' ? 'greenColor' : 'redColor'}>
                                                 {order.orderStatus}
                                             </p>
                                         </div>

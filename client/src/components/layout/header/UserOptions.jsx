@@ -23,7 +23,7 @@ export default function UserOptions({user}) {
   const navigate = useNavigate()
 
   const deshboard = () => {
-    navigate('/deshboard')
+    navigate('/admin/dashboard')
   }
   const orders = () => {
     navigate('/orders')
@@ -48,7 +48,7 @@ export default function UserOptions({user}) {
     { icon: <ExitToApp />, name: 'Logout', func: logoutUser },
   ]
 
-  if (user.role === 'admin') {
+  if (user && user.role === 'admin') {
     options.unshift({ icon: <Deshboard />, name: 'Deshboard', func: deshboard })
   }
 
@@ -61,7 +61,7 @@ export default function UserOptions({user}) {
         onClose={() => setOpen(false)}
         onOpen={() => setOpen(true)}
         open={open}
-        icon={<img className='speedDialIcon' src={user.avatar.url ? user.avatar.url : '/profile.png'} alt='Profile' />}
+        icon={<img className='speedDialIcon' src={ user && user.avatar.url ? user.avatar.url : '/profile.png'} alt='Profile' />}
         direction='down'
         className='speedDial'
       >

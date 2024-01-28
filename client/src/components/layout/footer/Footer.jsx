@@ -1,7 +1,7 @@
 import React from 'react'
 import playstore from '../../../assets/image/playstore.png'
 import appstore from '../../../assets/image/appstore.png'
-import logo from '../../../assets/image/logo.png'
+import logoImg from '../../../assets/image/logo.png'
 import './footer.css'
 
 export default function Footer() {
@@ -17,7 +17,8 @@ export default function Footer() {
                 </div>
 
                 <div className="midFooter">
-                    <h1>E-COMMERCE</h1>
+                    {/* <h1>E-COMMERCE</h1> */}
+                    <img src={logoImg} alt="" />
                     <p>High quality is our first priority</p>
                     <p>Copyrights 2024 &copy; DeveloperKarann</p>
                 </div>

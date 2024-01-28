@@ -34,9 +34,9 @@ footer{
   font-family: 'Roboto';
   color: #eb4034;
 }
-/* .midFooter > img{
+.midFooter > img{
     width: 300px;
-} */
+}
 .midFooter > p{
     max-width: 60%;
     margin: 1vmax auto;
@@ -63,4 +63,9 @@ footer{
 }
 .rightFooter > a:hover{
     color: #eb4034;
+}
+@media screen and (max-width: 600px) {
+    .midFooter > img{
+        width: 200px;
+    }
 }
