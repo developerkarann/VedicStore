@@ -10,7 +10,7 @@ export const createOrder = (order) => async (dispatch) => {
 
         const config = { Headers: { "Content-Type": "application/json" }, withCredentials: true };
 
-        const { data } = await axios.post(`/api/v1/order/new`, order, config)
+        const { data } = await axios.post(`${backendServer}/api/v1/order/new`, order, config)
 
         dispatch({ type: CREATE_ORDER_SUCCESS, payload: data })
     } catch (error) {
@@ -28,7 +28,7 @@ export const myOrders = () => async (dispatch) => {
 
         const config = { Headers: { "Content-Type": "application/json" }, withCredentials: true };
 
-        const { data } = await axios.get(`/api/v1/orders/me`, config)
+        const { data } = await axios.get(`${backendServer}/api/v1/orders/me`, config)
 
         dispatch({ type: MY_ORDER_SUCCESS, payload: data.orders })
     } catch (error) {
@@ -46,7 +46,7 @@ export const getOrderDetails = (id) => async (dispatch) => {
 
         const config = { Headers: { "Content-Type": "application/json" }, withCredentials: true };
 
-        const { data } = await axios.get(`/api/v1/order/${id}`, config)
+        const { data } = await axios.get(`${backendServer}/api/v1/order/${id}`, config)
 
         dispatch({ type: ORDER_DETAILS_SUCCESS, payload: data.order })
     } catch (error) {
@@ -64,7 +64,7 @@ export const getAllOrders = () => async (dispatch) => {
 
         const config = { Headers: { "Content-Type": "application/json" }, withCredentials: true };
 
-        const { data } = await axios.get(`/api/v1/admin/orders`, config)
+        const { data } = await axios.get(`${backendServer}/api/v1/admin/orders`, config)
 
         dispatch({ type: ALL_ORDERS_SUCCESS, payload: data.orders })
     } catch (error) {
@@ -83,7 +83,7 @@ export const updateOrder = (id, orderData) => async (dispatch) => {
 
         const config = { Headers: { "Content-Type": "application/json" }, withCredentials: true };
 
-        const { data } = await axios.put(`/api/v1/admin/order/${id}`, orderData, config)
+        const { data } = await axios.put(`${backendServer}/api/v1/admin/order/${id}`, orderData, config)
 
         dispatch({ type: UPDATE_ORDER_SUCCESS, payload: data.user })
     } catch (error) {
@@ -102,7 +102,7 @@ export const deleteOrder = (id) => async (dispatch) => {
 
         const config = { Headers: { "Content-Type": "application/json" }, withCredentials: true };
 
-        const { data } = await axios.delete(`/api/v1/admin/order/${id}`, config)
+        const { data } = await axios.delete(`${backendServer}/api/v1/admin/order/${id}`, config)
 
         dispatch({ type: DELETE_ORDER_SUCCESS, payload: data.success })
     } catch (error) {

@@ -47,7 +47,7 @@ export const login = (email, password) => async (dispatch) => {
         dispatch({ type: LOGIN_REQUEST });
 
 
-        const { data } = await axios.post(`/api/v1/login`, { email, password }, config)
+        const { data } = await axios.post(`${backendServer}/api/v1/login`, { email, password }, config)
 
         dispatch({ type: LOGIN_SUCCESS, payload: data.user })
     } catch (error) {
@@ -66,7 +66,7 @@ export const register = (userData) => async (dispatch) => {
 
         const regConfig = { Headers: { "Content-Type": "multipart/form-data" }, withCredentials: true };
 
-        const { data } = await axios.post(`/api/v1/register`, userData, regConfig)
+        const { data } = await axios.post(`${backendServer}/api/v1/register`, userData, regConfig)
 
         dispatch({ type: REGISTER_SUCCESS, playload: data.user })
     } catch (error) {
@@ -97,7 +97,7 @@ export const loadUser = () => async (dispatch) => {
 export const logout = () => async (dispatch) => {
     try {
 
-        await axios.get(`/api/v1/logout`, config)
+        await axios.get(`${backendServer}/api/v1/logout`, config)
 
         dispatch({ type: LOGOUT_SUCCESS })
     } catch (error) {
@@ -121,7 +121,7 @@ export const updateProfile = (userData) => async (dispatch) => {
 
         const updateConfig = { Headers: { "Content-Type": "multipart/form-data" }, withCredentials: true };
 
-        const { data } = await axios.put(`/api/v1/me/update`, userData, updateConfig)
+        const { data } = await axios.put(`${backendServer}/api/v1/me/update`, userData, updateConfig)
 
         dispatch({ type: UPDATE_PROFILE_SUCCESS, playload: data.success })
     } catch (error) {
@@ -137,7 +137,7 @@ export const updatePassword = (password) => async (dispatch) => {
         dispatch({ type: UPDATE_PASSWORD_REQUEST });
 
 
-        const { data } = await axios.put(`/api/v1/password/update`, password, config)
+        const { data } = await axios.put(`${backendServer}/api/v1/password/update`, password, config)
 
         dispatch({ type: UPDATE_PASSWORD_SUCCESS, playload: data.success })
     } catch (error) {
@@ -154,7 +154,7 @@ export const forgotPassowrd = (email) => async (dispatch) => {
         dispatch({ type: FORGOT_PASSWORD_REQUEST });
 
 
-        const { data } = await axios.post(`/api/v1/password/forgot`, email, config)
+        const { data } = await axios.post(`${backendServer}/api/v1/password/forgot`, email, config)
 
         dispatch({ type: FORGOT_PASSWORD_SUCCESS, payload: data.message })
     } catch (error) {
@@ -170,7 +170,7 @@ export const resetPassowrd = (token, passwords) => async (dispatch) => {
         dispatch({ type: RESET_PASSWORD_REQUEST });
 
 
-        const { data } = await axios.put(`/api/v1/password/reset/${token}`, passwords, config)
+        const { data } = await axios.put(`${backendServer}/api/v1/password/reset/${token}`, passwords, config)
 
         dispatch({ type: RESET_PASSWORD_SUCCESS, payload: data.success })
     } catch (error) {
@@ -189,7 +189,7 @@ export const getAllUser = () => async (dispatch) => {
     try {
         dispatch({ type: ALL_USERS_REQUEST });
 
-        const { data } = await axios.get(`/api/v1/admin/users`, config)
+        const { data } = await axios.get(`${backendServer}/api/v1/admin/users`, config)
 
         dispatch({ type: ALL_USERS_SUCCESS, payload: data.users })
     } catch (error) {
@@ -205,7 +205,7 @@ export const getUserDetails = (id) => async (dispatch) => {
     try {
         dispatch({ type: USER_DETAILS_REQUEST });
 
-        const { data } = await axios.get(`/api/v1/admin/user/${id}`, config)
+        const { data } = await axios.get(`${backendServer}/api/v1/admin/user/${id}`, config)
 
         dispatch({ type: USER_DETAILS_SUCCESS, payload: data.user })
     } catch (error) {
@@ -221,7 +221,7 @@ export const updateUser = (id, userData) => async (dispatch) => {
     try {
         dispatch({ type: UPDATE_USER_REQUEST });
 
-        const { data } = await axios.put(`/api/v1/admin/user/${id}`, userData, config)
+        const { data } = await axios.put(`${backendServer}/api/v1/admin/user/${id}`, userData, config)
 
         dispatch({ type: UPDATE_USER_SUCCESS, playload: data.success })
     } catch (error) {
@@ -237,7 +237,7 @@ export const deleteUser = (id) => async (dispatch) => {
     try {
         dispatch({ type: DELETE_USER_REQUEST });
 
-        const { data } = await axios.delete(`/api/v1/admin/user/${id}`, config)
+        const { data } = await axios.delete(`${backendServer}/api/v1/admin/user/${id}`, config)
 
         dispatch({ type: DELETE_USER_SUCCESS, playload: data.success })
     } catch (error) {
