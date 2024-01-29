@@ -8,7 +8,7 @@ import MetaData from '../../layout/MetaData'
 import EditIcon from '@material-ui/icons/Edit'
 import DeleteIcon from '@material-ui/icons/Delete'
 import Sidebar from '../Dashboard/Sidebar'
-import './css/ProductList.css'
+import './css/productList.css'
 import { clearErrors, deleteProduct, getAdminProducts } from '../../../actions/productAction'
 import { DELETE_PRODUCT_RESET } from '../../../constants/productConstants'
 
