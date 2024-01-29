@@ -12,12 +12,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useAlert } from 'react-alert';
 import './header.css';
 
-export default function UserOptions({user}) {
+export default function UserOptions({ user }) {
 
   const dispatch = useDispatch();
   const alert = useAlert();
 
-  const {cartItems} = useSelector((state) => state.cart)
+  const { cartItems } = useSelector((state) => state.cart)
 
   const [open, setOpen] = useState(false)
   const navigate = useNavigate()
@@ -35,7 +35,7 @@ export default function UserOptions({user}) {
     navigate('/account')
   }
   const logoutUser = async () => {
-     dispatch(logout())
+    dispatch(logout())
     // console.log(dispatch(logout()))
     alert.success('Logout Successfully')
     navigate('/login')
@@ -45,7 +45,7 @@ export default function UserOptions({user}) {
   const options = [
     { icon: <ListAlt />, name: 'Orders', func: orders },
     { icon: <Person />, name: 'Profile', func: account },
-    { icon: <ShoppingCartIcon style={{color: cartItems.length> 0? 'tomato': 'unset'}} />, name: `Cart${cartItems.length}`, func: cart },
+    { icon: <ShoppingCartIcon style={{ color: cartItems.length > 0 ? 'tomato' : 'unset' }} />, name: `Cart${cartItems.length}`, func: cart },
     { icon: <ExitToApp />, name: 'Logout', func: logoutUser },
   ]
 
@@ -62,7 +62,7 @@ export default function UserOptions({user}) {
         onClose={() => setOpen(false)}
         onOpen={() => setOpen(true)}
         open={open}
-        icon={<img className='speedDialIcon' src={ user && user.avatar.url ? user.avatar.url : '/profile.png'} alt='Profile' />}
+        icon={<img className='speedDialIcon' src={user && user.avatar.url ? user.avatar.url : '/profile.png'} alt='Profile' />}
         direction='down'
         className='speedDial'
       >
