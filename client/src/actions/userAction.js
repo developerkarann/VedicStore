@@ -96,10 +96,10 @@ export const loadUser = () => async (dispatch) => {
 //Logout user
 export const logout = () => async (dispatch) => {
     try {
-
         await axios.get(`/api/v1/logout`, config)
 
         dispatch({ type: LOGOUT_SUCCESS })
+        // console.log('Logout triggerd')
     } catch (error) {
         dispatch({
             type: LOGIN_FAIL,

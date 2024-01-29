@@ -35,11 +35,11 @@ export default function UserOptions({user}) {
     navigate('/account')
   }
   const logoutUser = async () => {
-    await dispatch(logout())
+     dispatch(logout())
     // console.log(dispatch(logout()))
     alert.success('Logout Successfully')
     navigate('/login')
-    // location.reload()
+    location.reload()
   }
 
   const options = [
