@@ -49,7 +49,7 @@ export const getProduct = (keyword = "", currentPage = 1, category, ratings = 0)
     } catch (error) {
         dispatch({
             type: ALL_PRODUCT_FAIL,
-            payload: error.message
+            payload: error.response.data.message
         })
     }
 }
@@ -67,7 +67,7 @@ export const getAdminProducts = () => async (dispatch) => {
 
         dispatch({ type: ADMIN_PRODUCTS_SUCCESS, payload: data.products })
     } catch (error) {
-        dispatch({ type: ADMIN_PRODUCTS_FAIL, payload: error.message })
+        dispatch({ type: ADMIN_PRODUCTS_FAIL, payload: error.response.data.message})
     }
 }
 
@@ -87,7 +87,7 @@ export const createProduct = (productData) => async (dispatch) => {
     } catch (error) {
         dispatch({
             type: NEW_PRODUCT_FAIL,
-            payload: error.message
+            payload: error.response.data.message
         })
     }
 }
@@ -108,7 +108,7 @@ export const deleteProduct = (id) => async (dispatch) => {
     } catch (error) {
         dispatch({
             type: DELETE_PRODUCT_FAIL,
-            payload: error.message
+            payload: error.response.data.message
         })
     }
 }
@@ -129,7 +129,7 @@ export const updateProduct = (id, productData) => async (dispatch) => {
     } catch (error) {
         dispatch({
             type: UPDATE_PRODUCT_FAIL,
-            payload: error.message
+            payload: error.response.data.message
         })
     }
 }
@@ -149,7 +149,7 @@ export const getProductDetails = (id) => async (dispatch) => {
     } catch (error) {
         dispatch({
             type: PRODUCT_DETAILS_FAIL,
-            payload: error.message
+            payload: error.response.data.message
         })
     }
 }
@@ -198,8 +198,7 @@ export const getAllReviews = (productId) => async (dispatch) => {
     } catch (error) {
         dispatch({
             type: ALL_REVIEW_FAIL,
-            payload: error.message
-            // payload: error.message
+            payload: error.response.data.message
         })
     }
 }
@@ -220,7 +219,7 @@ export const deleteReviews = (reviewId, productId) => async (dispatch) => {
     } catch (error) {
         dispatch({
             type: DELETE_REVIEW_FAIL,
-            payload: error.message
+            payload: error.response.data.message
         })
     }
 }
