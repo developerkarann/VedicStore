@@ -39,7 +39,7 @@ export default function UserOptions({user}) {
     // console.log(dispatch(logout()))
     alert.success('Logout Successfully')
     navigate('/login')
-    location.reload()
+    // location.reload()
   }
 
   const options = [
