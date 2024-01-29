@@ -32,14 +32,14 @@ app.use('/api/v1', user)
 app.use('/api/v1', order)
 app.use('/api/v1', payment)
 
-// app.use(express.static(path.join(__dirname, './dist')))
+app.use(express.static(path.join(__dirname, '../client/dist')))
 
-// app.get('*', (req, res) => {
-//    res.sendFile(path.resolve(__dirname, './dist/index.html'))
-// })
 app.get('*', (req, res) => {
-   res.send("<h1>Hello World</h>")
+   res.sendFile(path.resolve(__dirname, '../client/dist/index.html'))
 })
+// app.get('*', (req, res) => {
+//    res.send("<h1>Hello World</h>")
+// })
 
 
 // Error Handling \ Middleware
