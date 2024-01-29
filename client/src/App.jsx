@@ -92,6 +92,7 @@ function App() {
           <Route exact path='/admin/users' Component={UsersList} />
           <Route exact path='/admin/user/:id' Component={UpdateUser} />
           <Route exact path='/admin/reviews' Component={ProductReviews} />
+          <Route path='*' Component={NotFound}/>
           
         </Routes>
         <Footer />
