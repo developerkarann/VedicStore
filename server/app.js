@@ -32,10 +32,13 @@ app.use('/api/v1', user)
 app.use('/api/v1', order)
 app.use('/api/v1', payment)
 
-app.use(express.static(path.join(__dirname, './dist')))
+// app.use(express.static(path.join(__dirname, './dist')))
 
+// app.get('*', (req, res) => {
+//    res.sendFile(path.resolve(__dirname, './dist/index.html'))
+// })
 app.get('*', (req, res) => {
-   res.sendFile(path.resolve(__dirname, './dist/index.html'))
+   res.send("<h1>Hello World</h>")
 })
 
 
