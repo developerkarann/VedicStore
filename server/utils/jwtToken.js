@@ -34,7 +34,6 @@ const removeToken = (statusCode, res) => {
         // httpOnly: true,
         secure: true,
         sameSite: 'none',
-        path: "https://vedicstore.vercel.app",
     };
 
 
