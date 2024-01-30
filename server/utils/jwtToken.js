@@ -38,7 +38,7 @@ const removeToken = (statusCode, res) => {
     };
 
 
-    res.status(statusCode).cookie('token', null, option).json({
+    res.status(statusCode).cookie('token', none, option).json({
         success: true,
         message: "Logged Out",
     });
