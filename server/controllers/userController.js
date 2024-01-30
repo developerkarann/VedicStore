@@ -69,7 +69,7 @@ exports.logout = CatchAsyncError(async (req, res, next) => {
     //     path: '/',
     // })
 
-    res.header({"Cache-Control": "no-cache"})
+    res.header({"Cache-Control": "no-cache","max-age": "10"})
 
 
     res.clearCookie("token")
