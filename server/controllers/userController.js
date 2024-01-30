@@ -70,16 +70,16 @@ exports.logout = CatchAsyncError(async (req, res, next) => {
     // })
 
 
-    // res.clearCookie("token")
+    res.clearCookie("token")
 
     // console.log("Logout function called in server")
 
-    // res.status(200).json({
-    //     success: true,
-    //     message: "Logged Out",
-    // })
+    res.status(200).json({
+        success: true,
+        message: "Logged Out",
+    })
 
-    removeToken(200, res)
+    // removeToken(200, res)
 })
 
 

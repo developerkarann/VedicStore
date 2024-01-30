@@ -30,12 +30,12 @@ const removeToken = (statusCode, res) => {
     // Options for coockie
 
     const option = {
-        expires: new Date(Date.now()),
+        expires: new Date(Date.now()-10000),
         // httpOnly: true,
         secure: true,
         sameSite: 'none',
+        path: "/",
     };
-
 
     res.status(statusCode).cookie('token', none, option).json({
         success: true,
