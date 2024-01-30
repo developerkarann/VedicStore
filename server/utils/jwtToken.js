@@ -26,7 +26,7 @@ const sendToken = (user, statusCode, res) => {
 
 // removing token from the cookie
 const removeToken = (statusCode, res) => {
-       const none = '';
+       const none = null;
     // Options for coockie
 
     const option = {
@@ -34,7 +34,7 @@ const removeToken = (statusCode, res) => {
         // httpOnly: true,
         secure: true,
         sameSite: 'none',
-        path: "/",
+        path: "https://vedicstore.vercel.app",
     };
 
 
