@@ -24,22 +24,26 @@ export default function UserOptions({ user }) {
 
   const deshboard = () => {
     navigate('/admin/dashboard')
+    setOpen(false)
   }
   const orders = () => {
     navigate('/orders')
+    setOpen(false)
   }
   const cart = () => {
     navigate('/cart')
+    setOpen(false)
   }
   const account = () => {
     navigate('/account')
+    setOpen(false)
   }
   const logoutUser = async () => {
     dispatch(logout())
-    // console.log(dispatch(logout()))
+    setOpen(false)
     alert.success('Logout Successfully')
     navigate('/login')
-    // location.reload()
+    location.reload()
   }
 
   const options = [

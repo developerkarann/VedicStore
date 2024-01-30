@@ -43,7 +43,7 @@
     width: 100%;
     box-sizing: border-box;
     border: 1px solid rgba(0, 0, 0, 0.267);
-    font: 300 0.9vmax cursive;
+    font: 300 0.9vmax 'Roboto';
     outline: none;
     border-radius: 4px;
 }
@@ -80,7 +80,7 @@
     z-index: 2;
     border: none;
     margin: 0;
-    font: 600 0.9vmax cursive;
+    font: 600 0.9vmax 'Roboto';
     transition: all 0.5s;
     padding: 0 1vmax;
     color: rgba(0, 0, 0, 0.555);
@@ -123,7 +123,7 @@
     .createProductForm>div>select,
     .createProductForm>div>textarea {
         padding: 2.5vmax 5vmax;
-        font: 300 1.7vmax cursive;
+        font: 300 1.7vmax 'Roboto';
     }
 
     .createProductForm>div>svg {
@@ -133,7 +133,7 @@
 
     #createProductFormFile>input::file-selector-button {
         height: 7vh;
-        font: 400 1.8vmax cursive;
+        font: 400 1.8vmax 'Roboto';
     }
 
     #createProductBtn {

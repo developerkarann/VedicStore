@@ -35,28 +35,26 @@ export default function Products() {
 
     const categories = [
         "Laptop",
-        "Footwear",
-        "Bottom",
-        "Tops",
-        "Attire",
+        "Book",
         "Camera",
         "Mobile",
+        "Cloths",
     ];
 
 
     useEffect(() => {
-        if(error){
+        if (error) {
             alert.error(error)
             dispatch(clearErrors())
         }
         dispatch(getProduct(keyword, currentPage, category, ratings))
-    }, [dispatch, keyword, currentPage,category, ratings, alert, error])
+    }, [dispatch, keyword, currentPage, category, ratings, alert, error])
 
     return (
         <>
             {loading ? <Loader /> :
                 <>
-                <MetaData title='Products - Ecommerce'/>
+                    <MetaData title='Products - Ecommerce' />
                     <h2 className='productsHeading'>Products</h2>
                     <div className="products">
                         {products &&
@@ -68,15 +66,15 @@ export default function Products() {
                     </div>
 
                     <div className="filterBox">
-                        <Typography>Price</Typography>
+                        {/* <Typography>Price</Typography>
                         <Slider
-                        // value={price}
-                        // onChange={priceHandler}
-                        valueLabelDisplay='auto'
-                        aria-labelledby='range-slider'
-                        min={0}
-                        max={25000}
-                        />
+                            // value={price}
+                            // onChange={priceHandler}
+                            valueLabelDisplay='auto'
+                            aria-labelledby='range-slider'
+                            min={0}
+                            max={25000}
+                        /> */}
                         <Typography>Categories</Typography>
                         <ul className='categoryBox'>
                             {categories.map((category) => {
@@ -89,12 +87,12 @@ export default function Products() {
                         <fieldset>
                             <Typography component="legend">Ratings</Typography>
                             <Slider
-                            value={ratings}
-                            onChange={(e, newRating)=> {setRating(newRating)}}
-                            aria-labelledby='continous-slider'
-                            min={0}
-                            max={5}
-                            valueLabelDisplay='auto'
+                                value={ratings}
+                                onChange={(e, newRating) => { setRating(newRating) }}
+                                aria-labelledby='continous-slider'
+                                min={0}
+                                max={5}
+                                valueLabelDisplay='auto'
                             >
                             </Slider>
                         </fieldset>

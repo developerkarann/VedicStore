@@ -1,15 +1,29 @@
-.speedDial{
+.speedDial {
     position: fixed;
-    right: 3vmax;
-    top: 3vmax;
+    right: 6vmax;
+    top: 2px;
     z-index: 11;
 }
-.speedDialIcon{
+
+.speedDialIcon {
     width: 56px;
     height: 56px;
     border-radius: 100%;
 }
 
-@media screen and (max-width: 600px) {
-    
+@media screen and (max-width: 690px) {
+    .speedDial {
+        right: 5vmax;
+        top: 5px;
+    }
+
+    .MuiFab-primary {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .speedDialIcon {
+        width: 35px;
+        height: 35px;
+    }
 }

@@ -1,0 +1,151 @@
+.max-width {
+    max-width: 1330px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.navbar {
+    background-color: red;
+    padding: 3px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    font-family: "Ubuntu", sans-serif;
+    transition: all 0.03 ease;
+}
+
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo .brandLogo{
+    width: 140px;
+}
+
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    display: block;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3 ease;
+    text-decoration: none;
+}
+.navbar .menu li a i {
+    font-size: 25px;
+}
+
+.navbar .menu li a:hover {
+    border-bottom: 1px solid white;
+}
+
+.navbar.sticky .menu li a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+/* hamburger */
+
+.menu-btn {
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+
+.searchBox > input[type="text"]{
+    box-shadow: 0 0 10px white;
+    /* background-color: white; */
+    background: none;
+    border: none;
+    /* color: rgba(0,0,0,0.637); */
+    color: white !important;
+    padding: 1vmax 2vmax;
+    width: 500px;
+    outline: none;
+    border-radius: 0;
+    font:300 1.1vmax 'Roboto';
+    box-sizing: border-box;
+    height: 20px;
+    border-radius: 6px 0 0 6px;
+}
+.searchBox > button{
+    box-shadow: 0 0 5px white;
+    border-radius: 0;
+    background: none;
+    border: none;
+    padding: 6px;
+    font: 300 1.1vmax 'Roboto';
+    cursor: pointer;
+    color: white;
+    transition: all 0.5s;
+    border-radius: 0px 6px 6px 0px;
+}
+
+
+/* Responsive Media Query */
+
+
+
+@media (max-width: 940px) {
+
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active::before {
+        content: "\f00d";
+    }
+
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 65%;
+        left: -100%;
+        top: 0;
+        background: red;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu.active {
+        left: 0;
+    }
+
+    .navbar .menu li {
+        display: block;
+        /* font-size: 19px; */
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font: 25px;
+    }
+
+    .navbar .logo {
+        z-index: 999;
+    }
+}
+
+
+@media (max-width: 690px) {
+    .max-width {
+        padding: 0 23px;
+    }
+    .navbar .logo .brandLogo{
+        width: 100px;
+    }
+}

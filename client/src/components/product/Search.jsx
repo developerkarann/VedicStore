@@ -19,10 +19,10 @@ export default function Search() {
 
         <>
             <MetaData title='Search a product' />
-            <form className="searchBox" onSubmit={searchSubmitHandler}>
+            {/* <form className="searchBox" onSubmit={searchSubmitHandler}>
                 <input type="text" placeholder='Search A Product' onChange={(e) => setKeyword(e.target.value)} />
                 <input type="submit" defaultValue="Search" />
-            </form>
+            </form> */}
 
         </>
     )

@@ -94,6 +94,7 @@ export default function ProductList() {
                         pageSize={10}
                         disableSelectionOnClick
                         className='productListTable'
+                        autoHeight
                     />
                 </div>
 

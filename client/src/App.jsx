@@ -37,6 +37,8 @@ import UpdateUser from './components/Admin/User/UpdateUser'
 import ProductReviews from './components/Admin/Review/ProductReviews'
 import About from './components/layout/About/About'
 import NotFound from './components/layout/Not Found/NotFound'
+import MyProfile from './components/User/Profile/MyProfile'
+import Navbar from './components/layout/Navbar/Navbar'
 
 
 
@@ -61,7 +63,8 @@ function App() {
   return (
     <>
       <Router>
-        <Header />
+        <Navbar/>
+        {/* <Header /> */}
         <Routes>
           <Route exact path='/' Component={Home} />
           <Route exact path='/about' Component={About} />
@@ -71,7 +74,7 @@ function App() {
           <Route path='/products/:keyword' Component={Products} />
           <Route exact path='/search' Component={Search} />
           <Route exact path='/login' Component={LoginSignUp} />
-          <Route exact path='/account' Component={Profile} />
+          <Route exact path='/account' Component={MyProfile} />
           <Route exact path='/me/update' Component={UpdateProfile} />
           <Route exact path='/password/update' Component={UpdatePassword} />
           <Route exact path='/password/forgot' Component={ForgotPassword} />

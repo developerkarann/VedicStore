@@ -87,10 +87,12 @@
 }
 .filterBox > fieldset{
     border: 1px solid rgba(0, 0, 0, 0.123);
+    border: none;
+    
 }
 
-@media screen and(max-width: 750px) {
-    .filterBox{
+@media screen and (max-width: 750px) {
+    /* .filterBox{
         width: 20vmax;
         background-color: red;
         border: 20px red;
@@ -99,5 +101,8 @@
     }
     .page-link{
         font: 300 1.7vmax 'Roboto'
+    } */
+    .productsHeading{
+        margin-top: 40px;
     }
 }

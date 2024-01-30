@@ -43,7 +43,7 @@ export default function Header() {
   return (
     <>
       <ReactNavbar {...options}/>
-       {isAuthenticated && <UserOptions user={user} />}
+       {/* {isAuthenticated && <UserOptions user={user} />} */}
     </>
   )
 }
