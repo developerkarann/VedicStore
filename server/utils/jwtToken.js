@@ -26,7 +26,7 @@ const sendToken = (user, statusCode, res) => {
 
 // removing token from the cookie
 const removeToken = (statusCode, res) => {
-
+       const none = '';
     // Options for coockie
 
     const option = {
