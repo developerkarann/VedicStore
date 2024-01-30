@@ -79,6 +79,7 @@ exports.logout = CatchAsyncError(async (req, res, next) => {
     res.status(200).json({
         success: true,
         message: "Logged Out",
+        time: Date.now()
     })
 
     // removeToken(200, res)
