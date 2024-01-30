@@ -23,4 +23,29 @@ const sendToken = (user, statusCode, res) => {
 
 }
 
-module.exports = sendToken;
+
+// removing token from the cookie
+const removeToken = (statusCode, res) => {
+
+    // Options for coockie
+
+    const option = {
+        expires: new Date(Date.now()),
+        // httpOnly: true,
+        secure: true,
+        sameSite: 'none',
+        path: "/",
+    };
+
+
+    res.status(statusCode).cookie('token', null, option).json({
+        success: true,
+        message: "Logged Out",
+    });
+
+
+}
+
+
+
+module.exports = { removeToken, sendToken };
