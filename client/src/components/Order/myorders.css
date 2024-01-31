@@ -1,7 +1,7 @@
 .myOrdersPage {
     width: 100vw;
     max-width: 100%;
-    padding: 0 7vmax;
+    padding: 6vmax 0;
     box-sizing: border-box;
     /* background-color: #4158D0; */
     /* background-image: linear-gradient(43deg, #B041FF, #6698FF 46%); */
@@ -12,6 +12,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+
 }
 
 #myOrdersHeading {
@@ -32,7 +33,7 @@
     border: none;
 }
 .MuiDataGrid-columnHeader{
-    background-color: tomato;
+    background-color: rgb(201, 31, 201);
     padding: 1vmax !important;
 }
 .MuiDataGrid-columnHeader > div {

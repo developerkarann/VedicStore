@@ -9,6 +9,8 @@ import Loader from '../loader/Loader'
 import { useAlert } from 'react-alert'
 import logoImg from '../../../assets/image/logo.png'
 import { Link, useNavigate } from 'react-router-dom'
+import BannerSlider from './BannerSlider/BannerSlider'
+
 
 export default function Home() {
 
@@ -36,17 +38,25 @@ export default function Home() {
       {loading ? <Loader /> :
         <>
           <MetaData title="Home - Ecommerce" />
-          <div className="banner">
-            {/* <p>Welcome To</p> */}
-            <img src='./logo.png' alt="" className='logoImg' />
-            <h1>FIND AMAZING PRODUCTS BELOW </h1>
-            <a href="#container">
-              <button>Scroll <CgMouse /> </button>
-              {/* <button class="btn"><i class="animation"></i> Scroll <CgMouse />  <i class="animation"></i>
-              </button> */}
 
-            </a>
+          <BannerSlider />
+
+
+          <div className="banner">
+
+            {/* <div className="bannerBox">
+              <p>Welcome To</p>
+              <img src='./logo.png' alt="" className='logoImg' />
+              <h1>FIND VEDIC PRODUCTS BELOW </h1>
+              <a href="#container">
+                <button>Scroll <CgMouse /> </button>
+              </a>
+
+            </div> */}
           </div>
+
+
+
 
           <h2 className='homeHeading'>Featured Product</h2>
 

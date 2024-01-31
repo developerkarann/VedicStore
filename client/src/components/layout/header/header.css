@@ -1,7 +1,7 @@
 .speedDial {
     position: fixed;
-    right: 6vmax;
-    top: 2px;
+    right: 1vmax;
+    top: 5px;
     z-index: 11;
 }
 
@@ -11,9 +11,16 @@
     border-radius: 100%;
 }
 
+@media screen and (max-width: 950px) {
+    .speedDial {
+        right: 1vmax;
+        top: 5px;
+    }
+}
+
 @media screen and (max-width: 690px) {
     .speedDial {
-        right: 5vmax;
+        right: 4vmax;
         top: 5px;
     }
 

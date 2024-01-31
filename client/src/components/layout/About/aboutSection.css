@@ -5,7 +5,7 @@
   background-color: white;
   display: grid;
   grid-template-columns: 4fr 4fr;
-  position: fixed;
+  /* position: fixed; */
 }
 
 .aboutSectionGradient {
@@ -90,6 +90,9 @@
 }
 
 @media screen and (max-width: 600px) {
+  .aboutSection {
+    height: 90vh;
+  }
   .aboutSectionContainer > div {
     display: block;
   }

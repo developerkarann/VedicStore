@@ -6,6 +6,7 @@
    display: flex;
    flex-direction: column;
    height: 100vh;
+   margin-top: 1.5vmax;
 }
 
 .newProductContainer h1{
@@ -23,7 +24,7 @@
     padding: 3vmax;
     justify-content: space-evenly;
     height: 85%;
-    width: 40vh;
+    width: 70vh;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.219);
 }
@@ -93,7 +94,7 @@
 
 #createProductBtn {
     border: none;
-    background-color: tomato;
+    background-color:rgb(201, 31, 201);
     color: white;
     font: 300 0.9vmax 'Roboto';
     width: 100%;
@@ -106,7 +107,7 @@
 }
 
 #createProductBtn:hover {
-    background-color: rgb(179, 66, 46);
+    background-color: rgb(160, 25, 160);
 }
 
 

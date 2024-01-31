@@ -39,11 +39,13 @@ export default function UserOptions({ user }) {
     setOpen(false)
   }
   const logoutUser = async () => {
-    dispatch(logout())
     setOpen(false)
-    alert.success('Logout Successfully')
+    dispatch(logout())
+    alert.success('Logged Out Successfully')
     navigate('/login')
-    location.reload()
+    setTimeout(() => {
+      location.reload()
+    }, 3000);
   }
 
   const options = [

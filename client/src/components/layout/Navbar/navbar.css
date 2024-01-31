@@ -1,18 +1,19 @@
 .max-width {
-    max-width: 1330px;
+    max-width: 1550px;
     padding: 0 80px;
     margin: auto;
 }
 
 .navbar {
-    background-color: red;
+    background-color: rgb(201, 31, 201);
     padding: 3px 0;
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
     z-index: 999;
-    font-family: "Ubuntu", sans-serif;
     transition: all 0.03 ease;
+    padding: 0 0;
+    filter: drop-shadow(3px 0px 10px #222);
 }
 
 
@@ -21,8 +22,10 @@
     align-items: center;
     justify-content: space-between;
 }
-.navbar .logo .brandLogo{
-    width: 140px;
+
+.navbar .logo .brandLogo {
+    width: 160px;
+    filter: drop-shadow(3px 3px 3px #999);
 }
 
 
@@ -35,18 +38,20 @@
     display: block;
     color: white;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 400;
     margin-left: 25px;
     transition: color 0.3 ease;
     text-decoration: none;
-}
-.navbar .menu li a i {
-    font-size: 25px;
+    font-family: "Popins", sans-serif;
 }
 
-.navbar .menu li a:hover {
-    border-bottom: 1px solid white;
+.navbar .menu li a i {
+    font-size: 18px;
 }
+
+/* .navbar .menu li a:hover {
+    border-bottom: 1px solid white;
+} */
 
 .navbar.sticky .menu li a:hover {
     text-decoration: underline;
@@ -63,7 +68,7 @@
 }
 
 
-.searchBox > input[type="text"]{
+.searchBox>input[type="text"] {
     box-shadow: 0 0 10px white;
     /* background-color: white; */
     background: none;
@@ -74,12 +79,13 @@
     width: 500px;
     outline: none;
     border-radius: 0;
-    font:300 1.1vmax 'Roboto';
+    font: 300 1.1vmax 'Roboto';
     box-sizing: border-box;
     height: 20px;
     border-radius: 6px 0 0 6px;
 }
-.searchBox > button{
+
+.searchBox>button {
     box-shadow: 0 0 5px white;
     border-radius: 0;
     background: none;
@@ -145,7 +151,8 @@
     .max-width {
         padding: 0 23px;
     }
-    .navbar .logo .brandLogo{
+
+    .navbar .logo .brandLogo {
         width: 100px;
     }
 }

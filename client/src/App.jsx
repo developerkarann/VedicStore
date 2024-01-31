@@ -39,6 +39,7 @@ import About from './components/layout/About/About'
 import NotFound from './components/layout/Not Found/NotFound'
 import MyProfile from './components/User/Profile/MyProfile'
 import Navbar from './components/layout/Navbar/Navbar'
+import NewFooter from './components/layout/footer/NewFooter'
 
 
 
@@ -98,7 +99,8 @@ function App() {
           <Route path='*' Component={NotFound}/>
           
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
+        <NewFooter/>
       </Router>
 
     </>

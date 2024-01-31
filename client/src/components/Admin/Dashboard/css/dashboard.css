@@ -32,7 +32,7 @@
 }
 
 .dashboardSummary>div>p {
-    background-color: rgba(79, 117, 228, 0.932);
+   background-color: rgb(201, 31, 201);
     color: white;
     width: 100%;
     margin: 0 2rem;

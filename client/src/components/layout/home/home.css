@@ -1,7 +1,7 @@
 .banner {
     /* background-image: linear-gradient(to right, #635dc0, #3027ae); */
     /* background-image: url('../../../assets/image/cover.jfif'); */
-    background-image: url('../../../assets/image/krishna.png');
+    background-image: url('../../../assets/image/krishna.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -10,31 +10,36 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     color: white;
+    display: none;
 }
 
 .logoImg {
     margin: 1.5vmax;
     filter: drop-shadow(20px 10px 12px rgba(128, 128, 128, 0.74));
 }
-
-.banner>h1 {
-    margin: 5vmax;
-    margin-top: 20px;
-    font: 600 2.5vmax 'Roboto';
-    color: white;
-    filter: drop-shadow(20px 0px 15px black);
+.bannerBox{
+   margin-left: 50vmax;
+   margin-top: 3vmax;
 }
 
-.banner>p {
+.banner> .bannerBox>h1 {
+    margin: 5vmax;
+    margin-top: 20px;
+    font: 600 2vmax 'Roboto';
+    color: white;
+    filter: drop-shadow(10px 0px 15px black);
+}
+
+.banner> .bannerBox>p {
     font: 400 1.4vmax 'Lucida Sans';
     color: white;
     filter: drop-shadow(20px 0px 15px black);
 
 }
 
-.banner>a>button {
+.banner> .bannerBox >a>button {
     margin-bottom: 5vmax;
     cursor: pointer;
     background: none;
@@ -48,12 +53,12 @@
     color: white;
 }
 
-.banner>a>button:hover {
+.banner> .bannerBox>a>button:hover {
     background-color: tomato;
     color: white;
 }
 
-.banner::after {
+/* .banner::after {
     content: "";
     width: 100vw;
     height: 100vmin;
@@ -63,7 +68,7 @@
     left: 0;
     max-width: 100%;
     clip-path: polygon(100% 78%, 0% 100%, 100% 100%);
-}
+} */
 
 .homeHeading {
     text-align: center;
@@ -178,14 +183,14 @@
     padding: 0;
     font-size: inherit;
     font-family: inherit;
-   }
-   
-   .allProductHead  button.learn-more {
+}
+
+.allProductHead button.learn-more {
     width: 13rem;
     height: auto;
-   }
-   
-   .allProductHead button.learn-more .circle {
+}
+
+.allProductHead button.learn-more .circle {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: relative;
     display: block;
@@ -195,26 +200,26 @@
     /* background: #282936; */
     background: tomato;
     border-radius: 1.625rem;
-   }
-   
-   .allProductHead button.learn-more .circle .icon {
+}
+
+.allProductHead button.learn-more .circle .icon {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: absolute;
     top: 0;
     bottom: 0;
     margin: auto;
     background: #fff;
-   }
-   
-   .allProductHead button.learn-more .circle .icon.arrow {
+}
+
+.allProductHead button.learn-more .circle .icon.arrow {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     left: 0.625rem;
     width: 1.125rem;
     height: 0.125rem;
     background: none;
-   }
-   
-   .allProductHead button.learn-more .circle .icon.arrow::before {
+}
+
+.allProductHead button.learn-more .circle .icon.arrow::before {
     position: absolute;
     content: "";
     top: -0.29rem;
@@ -224,9 +229,9 @@
     border-top: 0.125rem solid #fff;
     border-right: 0.125rem solid #fff;
     transform: rotate(45deg);
-   }
-   
-   .allProductHead button.learn-more .button-text {
+}
+
+.allProductHead button.learn-more .button-text {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: absolute;
     top: 0;
@@ -240,20 +245,20 @@
     line-height: 1.6;
     text-align: center;
     text-transform: uppercase;
-   }
-   
-   .allProductHead button:hover .circle {
+}
+
+.allProductHead button:hover .circle {
     width: 100%;
-   }
-   
-   .allProductHead button:hover .circle .icon.arrow {
+}
+
+.allProductHead button:hover .circle .icon.arrow {
     background: #fff;
     transform: translate(1rem, 0);
-   }
-   
-   .allProductHead button:hover .button-text {
+}
+
+.allProductHead button:hover .button-text {
     color: #fff;
-   }
+}
 
 
 
@@ -268,7 +273,15 @@
     }
 }
 
+@media screen and (max-width: 900px) {
+    .banner {
+        display: block;
+        background-image: url('../../../assets/image/krishnaMd.png');
+    }
+}
+
 @media screen and (max-width: 600px) {
+
     .productCard>p {
         font-size: 1.7vmax;
     }

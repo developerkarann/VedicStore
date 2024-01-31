@@ -29,12 +29,12 @@
 
 
 .cartPage {
-    padding: 5vmax;
+    padding: 10vmax 0;
 }
 
 .cartHeader {
-    background-color: tomato;
-    width: 90%;
+    background-color: rgb(201, 31, 201);
+    width: 95%;
     box-sizing: border-box;
     margin: auto;
     color: white;
@@ -45,6 +45,7 @@
 
 .cartHeader>p {
     margin: 10px;
+    font-size: 17px;
 }
 
 .cartHeader>p:last-child {
@@ -100,7 +101,7 @@
     grid-template-columns: 2fr 1.2fr;
 }
 .cartGrossTotalBox{
-    border-top: 2px solid red;
+    border-top: 2px solid rgb(201, 31, 201);
     margin: 1vmax 4vmax;
     box-sizing: border-box;
     padding: 2vmax 0;
@@ -113,12 +114,12 @@
     justify-content: flex-end;
 }
 .checkOutBtn > button{
-    background-color: tomato;
+    background-color: rgb(201, 31, 201);
     color: white;
     border: none;
     padding: 0.8vmax 4vmax;
     width: 50%;
-    font: 300 0.8vmax 'Roboto';
+    font: 300 1vmax 'Roboto';
     margin: 1vmax 4vmax;
     cursor: pointer;
     border-radius: 30px;

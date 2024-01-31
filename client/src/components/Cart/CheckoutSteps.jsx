@@ -24,10 +24,11 @@ export default function CheckoutSteps({ activeSteps }) {
 
     const stepsStyle = {
         boxSizing: 'border-box',
+        marginTop: '5vmax',
     };
     return (
         <>
-            <Stepper alternativeLabel activeStep={activeSteps} style={stepsStyle}>
+            <Stepper alternativeLabel activeStep={activeSteps} style={stepsStyle} >
                 {steps.map((item, index) => (
                     <Step
                         key={index}
@@ -35,7 +36,7 @@ export default function CheckoutSteps({ activeSteps }) {
                         completed={activeSteps >= index ? true : false}
                     >
                         <StepLabel icon={item.icon}
-                            style={{ color: activeSteps >= index ? 'tomato' : 'rgba(0,0,0,0.649)' }}
+                            style={{ color: activeSteps >= index ? 'rgb(201, 31, 201)' : 'rgba(0,0,0,0.649)' }}
                         > {item.label}</StepLabel>
                     </Step>
                 ))}

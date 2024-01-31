@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 .myProfile {
-    background-color: #28223F;
+    background-color: white;
     font-family: Montserrat, sans-serif;
     display: flex;
     align-items: center;
@@ -10,6 +10,7 @@
     min-height: 100vh;
     margin: 0;
     box-sizing: border-box;
+    margin-top: 2.5vmax;
 }
 
 .myProfile h3 {
@@ -51,7 +52,7 @@
 }
 
 .myProfile .card-container .round {
-    border: 1px solid #03BFCB;
+    border: 1px solid white;
     border-radius: 50%;
     padding: 7px;
 }
@@ -82,7 +83,7 @@
 }
 
 .myProfile .actions button.primary {
-    background-color: #03BFCB;
+    background-color: rgb(201, 31, 201);
     border: 2px solid #2D2747;
     border-radius: 4px;
     color: white;

@@ -17,14 +17,14 @@ export default function Sidebar() {
     return (
         <>
             <div className="sidebar">
-                <Link to='/'> <img src={logo} alt="ECommerce" /></Link>
+                {/* <Link to='/'> <img src={logo} alt="ECommerce" /></Link> */}
                 <Link to='/admin/dashboard' >
                     <p><DashboardIcon /> Deshboard</p>
                 </Link>
 
-                <Link>
+                {/* <Link>
                     <TreeView defaultCollapseIcon={<ExpandMoreIcon />} defaultExpandIcon={<ImportExporIcont />}>
-                        <TreeItem  nodeId="1" label="Products">
+                        <TreeItem nodeId="1" label="Products">
                             <Link to='/admin/products'>
                                 <TreeItem nodeId='2' label="All" icon={<PostAddIcon />}> </TreeItem>
                             </Link>
@@ -35,6 +35,14 @@ export default function Sidebar() {
 
                         </TreeItem>
                     </TreeView>
+                </Link> */}
+
+                <Link to='/admin/products'>
+                    <p><PostAddIcon />All Products</p>
+                </Link>
+
+                <Link to='/admin/product/new'>
+                    <p><AddIcon /> Product</p>
                 </Link>
 
                 <Link to='/admin/orders'>

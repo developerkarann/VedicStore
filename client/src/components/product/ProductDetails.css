@@ -72,7 +72,7 @@
     cursor: pointer;
     color: white;
     transition: all 0.5s;
-    background-color: tomato;
+    background-color: rgb(201, 31, 201);
     font: 500 0.9vmax "Roboto";
     border-radius: 20px;
     padding: 0.5vmax 2vmax;
@@ -81,7 +81,7 @@
 }
 
 .detailsBlock-3-1>button:hover {
-    background-color: rgb(214, 84, 61);
+    background-color: rgb(172, 25, 172);
 }
 
 .detailsBlock-3-1-1>button {
@@ -130,7 +130,7 @@
     cursor: pointer;
     color: white;
     transition: all 0.5s;
-    background-color: tomato;
+    background-color: rgb(201, 31, 201);
     font: 500 0.9vmax "Roboto";
     border-radius: 20px;
     padding: 0.6vmax 2vmax;
@@ -138,7 +138,7 @@
 }
 
 .submitReview:hover {
-    background-color: rgb(214, 84, 61);
+    background-color: rgb(165, 27, 165);
     transform: scale(1.1);
 }
 

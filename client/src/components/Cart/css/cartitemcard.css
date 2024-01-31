@@ -23,7 +23,7 @@
     color: rgba(24,24,24,0.815);
 }
 .cartItemCard > div > p{
-    color: tomato;
+    color: rgb(201, 31, 201);
     font: 100 0.8vmax 'Roboto';
     cursor: pointer;
 }

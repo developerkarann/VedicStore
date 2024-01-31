@@ -44,8 +44,8 @@ export default function Navbar() {
                         <li onClick={burger}><Link to="/products" className="menu-btn">Products</Link></li>
                         <li onClick={burger}><Link to="/about" className="menu-btn">About</Link></li>
                         <li onClick={burger}><Link to="/contact" className="menu-btn">Contact</Link></li>
-                        <li onClick={burger}><Link to="/cart" className="menu-btn"><i class="fa-solid fa-cart-shopping"></i></Link></li>
-                        <li onClick={burger}><Link to="/account" className="menu-btn"><i class="fa-solid fa-user"></i></Link></li>
+                        <li onClick={burger}><Link to="/cart" className="menu-btn"><i class="fa-solid fa-cart-shopping"></i> Cart</Link></li>
+                        <li onClick={burger}><Link to="/account" className="menu-btn"><i class="fa-solid fa-user"></i> Account</Link></li>
                     </ul>
                     <div className="menu-btn">
                         <i className="fas fa-bars" onClick={burger}> </i>
