@@ -29,7 +29,7 @@ export default function Navbar() {
     return (
         <>
             <nav className="navbar">
-                {isAuthenticated && <UserOptions user={user} />}
+                {/* {isAuthenticated && <UserOptions user={user} />} */}
                 <div className="max-width">
                     <div className="logo">
                         <Link to="/"> <img src="./whitelogo.png" className='brandLogo' alt="" /> </Link>
@@ -46,7 +46,9 @@ export default function Navbar() {
                         <li onClick={burger}><Link to="/contact" className="menu-btn">Contact</Link></li>
                         <li onClick={burger}><Link to="/cart" className="menu-btn"><i class="fa-solid fa-cart-shopping"></i> Cart</Link></li>
                         <li onClick={burger}><Link to="/account" className="menu-btn"><i class="fa-solid fa-user"></i> Account</Link></li>
+                        {isAuthenticated && <UserOptions user={user} burger={burger} />}
                     </ul>
+
                     <div className="menu-btn">
                         <i className="fas fa-bars" onClick={burger}> </i>
                     </div>

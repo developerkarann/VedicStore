@@ -1,5 +1,5 @@
 .productsHeading {
-    margin: 2vmax auto;
+    margin: 4vmax auto;
     width: 15vw;
     border-bottom: 1px solid rgba(0, 0, 0, 0.171);
     padding: 2vmax;
@@ -92,16 +92,16 @@
 }
 
 @media screen and (max-width: 750px) {
-    /* .filterBox{
+    .filterBox{
         width: 20vmax;
-        background-color: red;
+        /* background-color: red; */
         border: 20px red;
         position: static;
         margin: auto;
     }
     .page-link{
         font: 300 1.7vmax 'Roboto'
-    } */
+    }
     .productsHeading{
         margin-top: 40px;
     }

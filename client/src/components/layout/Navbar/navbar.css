@@ -120,10 +120,17 @@
         width: 65%;
         left: -100%;
         top: 0;
-        background: red;
+        background: rgb(201, 31, 201);
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;
+    }
+    #user{
+         border: 1px solid black;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
     }
 
     .navbar .menu.active {
