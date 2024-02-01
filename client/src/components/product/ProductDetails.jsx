@@ -107,7 +107,6 @@ export default function ProductDetails({ match }) {
                                                 key={item.url}
                                                 src={item.url}
                                                 alt={`${i} slide`} />
-
                                         )
                                     })}
 
@@ -121,7 +120,7 @@ export default function ProductDetails({ match }) {
                             </div>
                             <div className="detailsBlock-2">
                                 <Rating {...options} />
-                                <span className='detailsBlock-2-span'>({product.numOfReviews} Reviews)</span>
+                                {/* <span className='detailsBlock-2-span'>({product.numOfReviews} Reviews)</span> */}
                             </div>
                             <div className="detailsBlock-3">
                                 <h1>₹{product.price}</h1>

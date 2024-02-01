@@ -60,20 +60,23 @@ export default function Home() {
 
           <h2 className='homeHeading'>Featured Product</h2>
 
+
           <div className="container" id='container'>
             {products && products.map((data, index) => <ProductCard product={data} key={index} />)}
+            <p onClick={viewAllProduct} style={{ cursor: 'pointer' }} >View All</p>
           </div>
+            
           {/* <h5 className='allProductHeading'>
             <Link to='/products'>All Product</Link>
           </h5> */}
-          <div className="allProductHead" >
+          {/* <div className="allProductHead" >
             <button class="learn-more" onClick={viewAllProduct}>
               <span class="circle" aria-hidden="true">
                 <span class="icon arrow"></span>
               </span>
               <span class="button-text">More Products</span>
             </button>
-          </div>
+          </div> */}
         </>
       }
     </>

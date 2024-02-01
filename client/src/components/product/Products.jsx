@@ -34,12 +34,12 @@ export default function Products() {
     // }
 
     const categories = [
-        "Book",
-        "Worship",
+        "Books",
+        "Spiritual",
+        "Cloths",
         "Laptop",
         "Camera",
         "Mobile",
-        "Cloths",
     ];
 
 
@@ -107,9 +107,9 @@ export default function Products() {
                                 totalItemsCount={productsCount}
                                 onChange={setCurrentPageNo}
                                 nextPageText="Next"
-                                prevPageText="First"
-                                firstPageText="1st"
-                                lastPageText='Last'
+                                // prevPageText="First"
+                                // firstPageText="1st"
+                                // lastPageText='Last'
                                 itemClass='page-item'
                                 linkClass='page-link'
                                 activeClass='pageItemActive'

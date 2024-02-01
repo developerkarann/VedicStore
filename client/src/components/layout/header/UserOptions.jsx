@@ -12,7 +12,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useAlert } from 'react-alert';
 import './header.css';
 
-export default function UserOptions({ user }) {
+export default function UserOptions({ user, burger }) {
 
   const dispatch = useDispatch();
   const alert = useAlert();
@@ -25,18 +25,22 @@ export default function UserOptions({ user }) {
   const deshboard = () => {
     navigate('/admin/dashboard')
     setOpen(false)
+    burger()
   }
   const orders = () => {
     navigate('/orders')
     setOpen(false)
+    burger()
   }
   const cart = () => {
     navigate('/cart')
     setOpen(false)
+    burger()
   }
   const account = () => {
     navigate('/account')
     setOpen(false)
+    burger()
   }
   const logoutUser = async () => {
     setOpen(false)
@@ -46,6 +50,7 @@ export default function UserOptions({ user }) {
     setTimeout(() => {
       location.reload()
     }, 3000);
+    burger()
   }
 
   const options = [

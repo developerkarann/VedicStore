@@ -102,6 +102,9 @@
 
 .productCard>img {
     width: 15vmax;
+    max-width: 15vmax;
+    height: 20vmax;
+    max-height: 20vmax;
 }
 
 .productCard>div {

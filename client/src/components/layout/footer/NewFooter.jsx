@@ -37,8 +37,8 @@ export default function NewFooter() {
                         <h1>Social Media</h1>
                         <div class="sociallogos">
                             <div class="logobox">
-                                <a href="https://www.linkedin.com/in/karan-pal-developer/" class="fa fa-instagram"></a>
-                                <a href="https://instagram.com/krnn_sanatani" class="fa fa-linkedin"></a>
+                                <a href="https://instagram.com/krnn_sanatani " class="fa fa-instagram"></a>
+                                <a href="https://www.linkedin.com/in/karan-pal-developer/" class="fa fa-linkedin"></a>
                                 <a href="https://www.youtube.com/channel/UCK70BnONGiUUaZ49O2BOaBw" class="fa fa-youtube-play"></a>
                             </div>
                         </div>

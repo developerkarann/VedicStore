@@ -12,15 +12,15 @@ export default function ProductCard({ product }) {
     }
     return (
         <>
-            <Link className='productCard' to={`/product/${product._id}`}>
+            <a className='productCard' href={`/product/${product._id}`}>
                 <img src={  product.images[0].url && product.images[0].url} alt={product.name} />
-                <p>{product.name}</p>
+                <p>{product.name.substring(0, 35)}...</p>
                 <div>
                     <Rating {...options} />
                     <span className='ProductCardSpan'> ({product.numOfReviews}) Reviews</span>
                 </div>
                 <span>{`₹${product.price}`}</span>
-            </Link>
+            </a>
         </>
     )
 }

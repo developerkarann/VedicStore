@@ -59,6 +59,7 @@
 .detailsBlock-3>h1 {
     color: rgba(17, 17, 17, 0.999);
     margin: 1vmax 0;
+    margin-top: 20px;
     font: 600 1.8vmax 'Frankin Gothic Medium'
 }
 
@@ -91,6 +92,7 @@
     cursor: pointer;
     color: white;
     transition: all 0.5s;
+    border-radius: 6px;
 }
 
 .detailsBlock-3-1-1>button:hover {
@@ -105,6 +107,7 @@
     outline: none;
     font: 400 0.8vmax "Roboto";
     color: rgba(0, 0, 0, 0.74);
+
 }
 
 .detailsBlock-3>p {
@@ -118,11 +121,14 @@
 .detailsBlock-4 {
     color: rgba(0, 0, 0, 0.897);
     font: 500 1.2vmax sans-serif;
+    margin: 30px 0;
+
 }
 
 .detailsBlock-4>p {
     color: rgba(0, 0, 0, 0.534);
     font: 300 0.9vmax sans-serif;
+    margin-top: 20px;
 }
 
 .submitReview {
@@ -213,11 +219,13 @@
     .ProductDetails {
         flex-direction: column;
         height: unset;
+        padding: 3vmax;
     }
 
     .ProductDetails>div:last-child {
         align-items: center;
     }
+
     .CarouselImage {
         width: 30vmax;
     }
@@ -229,7 +237,8 @@
 
     .detailsBlock-1>p {
         text-align: center;
-        font-size: 1vmax;
+        font-size: 1.5vmax;
+        margin: 10px 0;
     }
 
     .detailsBlock-2 {
@@ -282,7 +291,7 @@
     }
 
     .detailsBlock-4>p {
-        font: 300 1.8vmax sans-serif;
+        font: 400 1.8vmax sans-serif;
     }
 
     .submitReview {

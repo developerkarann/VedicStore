@@ -92,6 +92,13 @@
 }
 
 @media screen and (max-width: 750px) {
+    .products {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 0;
+        justify-content: center;
+        min-height: 30vh;
+    }
     .filterBox{
         width: 20vmax;
         /* background-color: red; */

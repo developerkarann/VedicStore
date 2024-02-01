@@ -13,14 +13,14 @@
 
 @media screen and (max-width: 950px) {
     .speedDial {
-        right: 40%;
-        top: 20px;
+        right: 5%;
+        top: 30px;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .speedDial {
-        right: 37%;
+    /* .speedDial {
+        right: 10%;
         top: 20px;
-    }
+    } */
 }
