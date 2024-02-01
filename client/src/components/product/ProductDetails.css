@@ -23,7 +23,7 @@
 }
 
 .CarouselImage {
-    width: 20vmax;
+    width: 25vmax;
 }
 
 .detailsBlock-1>h2 {
@@ -33,7 +33,7 @@
 
 .detailsBlock-1>p {
     color: rgba(54, 54, 54, 0.582);
-    font: 200 0.8vmax cursive;
+    font: 200 0.8vmax 'Roboto';
 }
 
 .detailsBlock-2 {
@@ -48,7 +48,7 @@
 
 .detailsBlock-2-span {
     color: rgba(54, 54, 54, 0.582);
-    font: 200 0.8vmax cursive;
+    font: 200 0.8vmax 'Roboto';
     margin-left: 10px;
 }
 
@@ -193,7 +193,7 @@
 
 .reviewCardComment {
     color: rgba(0, 0, 0, 0.445);
-    font: 300 0.8vmax cursive
+    font: 300 0.8vmax 'Roboto'
 }
 
 .reviews {
@@ -217,6 +217,9 @@
 
     .ProductDetails>div:last-child {
         align-items: center;
+    }
+    .CarouselImage {
+        width: 30vmax;
     }
 
     .detailsBlock-1>h2 {
@@ -294,6 +297,6 @@
     }
 
     .reviewCardComment {
-        font: 300 3vw cursive
+        font: 300 3vw 'Roboto'
     }
 }

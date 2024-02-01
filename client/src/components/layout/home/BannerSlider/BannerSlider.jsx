@@ -14,15 +14,15 @@ export default function BannerSlider() {
              swipeable={true}
             >
                 <div>
-                    <img src="./assets/images/home/banner1.avif" />
+                    <img src="./assets/images/home/banner01.jpg" />
                     {/* <p className="legend">Legend 1</p> */}
                 </div>
                 <div>
-                    <img src="./assets/images/home/banner2.avif" />
+                    <img src="./assets/images/home/banner02.jpg" />
                     {/* <p className="legend">Legend 2</p> */}
                 </div>
                 <div>
-                    <img src="./assets/images/home/banner3.avif" />
+                    <img src="./assets/images/home/banner03.jpg" />
                     {/* <p className="legend">Legend 3</p> */}
                 </div>
             </Carousel>

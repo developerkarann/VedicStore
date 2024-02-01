@@ -36,13 +36,12 @@ export default function NewProduct() {
 
 
     const categories = [
+        "Book",
+        "Worship",
         "Laptop",
-        "Footwear",
-        "Bottom",
-        "Tops",
-        "Attire",
         "Camera",
         "Mobile",
+        "Cloths",
     ];
 
     const createProductImageChange = (e) => {

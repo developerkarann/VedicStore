@@ -186,8 +186,9 @@
 }
 
 .allProductHead button.learn-more {
-    width: 13rem;
+    width: 14rem;
     height: auto;
+    margin-bottom: 20px;
 }
 
 .allProductHead button.learn-more .circle {
@@ -198,7 +199,7 @@
     width: 3rem;
     height: 3rem;
     /* background: #282936; */
-    background: tomato;
+    background: rgb(201, 31, 201);
     border-radius: 1.625rem;
 }
 

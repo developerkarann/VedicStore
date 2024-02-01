@@ -34,8 +34,9 @@ export default function Products() {
     // }
 
     const categories = [
-        "Laptop",
         "Book",
+        "Worship",
+        "Laptop",
         "Camera",
         "Mobile",
         "Cloths",
