@@ -14,17 +14,19 @@
     flex-direction: column;
 }
 .cartItemCard > div > a{
-    font:300 0.9vmax cursive;
+    font:300 1.2vmax 'Roboto';
     color: rgba(24, 24,24,0.815);
     text-decoration: none;
 }
 .cartItemCard > div > span{
-    font: 300 0.9vmax 'Roboto';
+    margin: 5px 0;
+    font: 300 1vmax 'Roboto';
     color: rgba(24,24,24,0.815);
 }
 .cartItemCard > div > p{
+    margin-top: 10px;
     color: rgb(201, 31, 201);
-    font: 100 0.8vmax 'Roboto';
+    font: 100 0.9vmax 'Roboto';
     cursor: pointer;
 }
  
@@ -37,7 +39,7 @@
         margin: 1vmax 2vmax;
     }
     .cartItemCard > div > a {
-        font: 300 2vmax cursive;
+        font: 300 2vmax 'Roboto';
     }
     .cartItemCard > div > span{
         font: 300 1.8vmax 'Roboto';

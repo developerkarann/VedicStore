@@ -10,6 +10,7 @@ import { useAlert } from 'react-alert'
 import logoImg from '../../../assets/image/logo.png'
 import { Link, useNavigate } from 'react-router-dom'
 import BannerSlider from './BannerSlider/BannerSlider'
+import ProductsCategories from '../../product/ProductsCategories'
 
 
 export default function Home() {
@@ -39,44 +40,23 @@ export default function Home() {
         <>
           <MetaData title="Home - Ecommerce" />
 
-          <BannerSlider />
+          <div className="homeComponent">
 
 
-          <div className="banner">
+            <BannerSlider />
 
-            {/* <div className="bannerBox">
-              <p>Welcome To</p>
-              <img src='./logo.png' alt="" className='logoImg' />
-              <h1>FIND VEDIC PRODUCTS BELOW </h1>
-              <a href="#container">
-                <button>Scroll <CgMouse /> </button>
-              </a>
+            <ProductsCategories />
 
-            </div> */}
+            <h2 className='homeHeading'>Featured Product</h2>
+
+
+            <div className="container" id='container'>
+              {products && products.map((data, index) => <ProductCard product={data} key={index} />)}
+            </div>
+              <p onClick={viewAllProduct} style={{ cursor: 'pointer', textAlign:'center', marginBottom: '40px' }} >View All</p>
+
+
           </div>
-
-
-
-
-          <h2 className='homeHeading'>Featured Product</h2>
-
-
-          <div className="container" id='container'>
-            {products && products.map((data, index) => <ProductCard product={data} key={index} />)}
-            <p onClick={viewAllProduct} style={{ cursor: 'pointer' }} >View All</p>
-          </div>
-            
-          {/* <h5 className='allProductHeading'>
-            <Link to='/products'>All Product</Link>
-          </h5> */}
-          {/* <div className="allProductHead" >
-            <button class="learn-more" onClick={viewAllProduct}>
-              <span class="circle" aria-hidden="true">
-                <span class="icon arrow"></span>
-              </span>
-              <span class="button-text">More Products</span>
-            </button>
-          </div> */}
         </>
       }
     </>

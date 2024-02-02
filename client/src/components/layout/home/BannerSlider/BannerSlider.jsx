@@ -17,17 +17,17 @@ export default function BannerSlider() {
                 className='bannerSlider'
             >
                 <div>
+                    <img src="./assets/images/home/vedicstore.png" />
+                </div>
+                {/* <div>
                     <img src="./assets/images/home/banner01.jpg" />
-                    {/* <p className="legend">Legend 1</p> */}
                 </div>
                 <div>
                     <img src="./assets/images/home/banner02.jpg" />
-                    {/* <p className="legend">Legend 2</p> */}
                 </div>
                 <div>
                     <img src="./assets/images/home/banner03.jpg" />
-                    {/* <p className="legend">Legend 3</p> */}
-                </div>
+                </div> */}
             </Carousel>
         </>
     )

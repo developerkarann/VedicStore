@@ -1,0 +1,84 @@
+.categoryHeading {
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 1.5vmax;
+    border-bottom: 1px solid rgba(21, 21, 21, 0.5);
+    width: 20vmax;
+    margin: 5vmax auto;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.categoryContainer {
+    display: flex;
+    margin: 2vmax auto;
+    width: 95vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    /* background-color: rgb(236, 234, 234); */
+}
+.categoryCard {
+    /* border: 1px solid red; */
+    width: 10vmax;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: rgb(48, 48, 48);
+    margin: 1vmax 3vmax;
+    transition: all 0.5s;
+    padding-bottom: 0.5vmax;
+    align-items: center;
+    justify-content: center;
+}
+
+.categoryCard>img {
+    width: 6vmax;
+    height: 7vmax;
+}
+
+.categoryCard>p {
+    font-family: "Roboto";
+    font-size: 1vmax;
+    margin: 1vmax 0.5vmax;
+    margin-bottom: 0;
+    text-align: center;
+}
+.categoryCard:hover {
+    box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
+    transform: translateY(-1vmax);
+}
+
+
+
+@media screen and (max-width: 750px) {
+    .categoryContainer {
+        width: 100vw;
+    }
+    .categoryCard {
+        width: 5vmax;
+    }
+    
+    .categoryCard>img {
+        width: 4vmax;
+        height: 5vmax;
+    }
+
+    .categoryCard>p {
+        font-size: 0.8vmax;
+    }
+
+    .categoryCard>div {
+        margin: 0vmax;
+        display: block;
+    }
+
+    .categoryCard>span {
+        font-size: 1.5vmax;
+    }
+
+    .categoryCard>div>span {
+        margin: 0 0.5vmax;
+        font: 300 1vmax "Roboto";
+    }
+
+}

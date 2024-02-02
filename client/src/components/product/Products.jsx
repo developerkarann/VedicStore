@@ -10,6 +10,7 @@ import Slider from '@material-ui/core/Slider'
 import { Typography } from '@material-ui/core'
 import { useAlert } from 'react-alert'
 import MetaData from '../layout/MetaData'
+import ProductsCategories from './ProductsCategories'
 export default function Products() {
 
     const dispatch = useDispatch()
@@ -34,13 +35,29 @@ export default function Products() {
     // }
 
     const categories = [
-        "Books",
-        "Spiritual",
+        "Scriptures",
+        "Spiritual Products",
+        "Idols",
         "Cloths",
-        "Laptop",
-        "Camera",
-        "Mobile",
     ];
+    const cat = [
+        {
+            img: './assets/images/categories/boss.webp',
+            name: 'Scriptures'
+        },
+        {
+            img: './assets/images/categories/rudraksha.jpg',
+            name: 'Spiritual Products'
+        },
+        {
+            img: './assets/images/categories/aadiyogi.webp',
+            name: 'Idols'
+        },
+        {
+            img: './assets/images/categories/cloths.jpg',
+            name: 'Cloths'
+        },
+    ]
 
 
     useEffect(() => {
@@ -56,7 +73,19 @@ export default function Products() {
             {loading ? <Loader /> :
                 <>
                     <MetaData title='Products - Ecommerce' />
+                    <div className="pCategories" style={{ marginTop: '5vmax' }}>
+                        <div className="categoryContainer" id='container' >
+                            {cat.map((item, index) => (
+                                <div className='categoryCard' onClick={() => setCategory(item.name)}  >
+                                    <img src={item.img} alt={item.name} />
+                                    <p >{item.name}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                     <h2 className='productsHeading'>Products</h2>
+
+
                     <div className="products">
                         {products &&
                             products.map((product) => {
@@ -67,15 +96,6 @@ export default function Products() {
                     </div>
 
                     <div className="filterBox">
-                        {/* <Typography>Price</Typography>
-                        <Slider
-                            // value={price}
-                            // onChange={priceHandler}
-                            valueLabelDisplay='auto'
-                            aria-labelledby='range-slider'
-                            min={0}
-                            max={25000}
-                        /> */}
                         <Typography>Categories</Typography>
                         <ul className='categoryBox'>
                             {categories.map((category) => {

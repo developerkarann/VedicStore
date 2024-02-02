@@ -49,9 +49,12 @@
     font-size: 18px;
 }
 
-/* .navbar .menu li a:hover {
-    border-bottom: 1px solid white;
-} */
+.nav-user{
+    background-color: purple;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 25px !important;
+}
 
 .navbar.sticky .menu li a:hover {
     text-decoration: underline;
@@ -62,7 +65,7 @@
 
 .menu-btn {
     color: white;
-    font-size: 25px;
+    font-size: 30px;
     cursor: pointer;
     display: none;
 }
@@ -117,12 +120,12 @@
     .navbar .menu {
         position: fixed;
         height: 100vh;
-        width: 65%;
-        left: -100%;
-        top: 0;
+        width: 70%;
+        right: -100%;
+        top: 20px;
         background: rgb(201, 31, 201);
         text-align: center;
-        padding-top: 80px;
+        padding: 70px 0 0 0;
         transition: all 0.3s ease;
     }
     #user{
@@ -134,18 +137,22 @@
     }
 
     .navbar .menu.active {
-        left: 0;
+        right: 0;
     }
 
     .navbar .menu li {
         display: block;
-        /* font-size: 19px; */
+        /* font-size: 25px; */
     }
 
     .navbar .menu li a {
         display: inline-block;
         margin: 20px 0;
-        font: 25px;
+        font-size: 25px;
+    }
+    .navbar .menu li a i {
+        font-size: 25px;
+        margin-right: 5px;
     }
 
     .navbar .logo {

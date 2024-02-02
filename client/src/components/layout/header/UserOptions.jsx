@@ -49,7 +49,7 @@ export default function UserOptions({ user, burger }) {
     navigate('/login')
     setTimeout(() => {
       location.reload()
-    }, 3000);
+    }, 2000);
     burger()
   }
 

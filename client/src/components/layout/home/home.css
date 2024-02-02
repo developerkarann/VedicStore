@@ -1,79 +1,11 @@
-.banner {
-    /* background-image: linear-gradient(to right, #635dc0, #3027ae); */
-    /* background-image: url('../../../assets/image/cover.jfif'); */
-    background-image: url('../../../assets/image/krishna.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vmin;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: flex-end;
-    color: white;
-    display: none;
-}
-
-.logoImg {
-    margin: 1.5vmax;
-    filter: drop-shadow(20px 10px 12px rgba(128, 128, 128, 0.74));
-}
-.bannerBox{
-   margin-left: 50vmax;
-   margin-top: 3vmax;
-}
-
-.banner> .bannerBox>h1 {
-    margin: 5vmax;
-    margin-top: 20px;
-    font: 600 2vmax 'Roboto';
-    color: white;
-    filter: drop-shadow(10px 0px 15px black);
-}
-
-.banner> .bannerBox>p {
-    font: 400 1.4vmax 'Lucida Sans';
-    color: white;
-    filter: drop-shadow(20px 0px 15px black);
-
-}
-
-.banner> .bannerBox >a>button {
-    margin-bottom: 5vmax;
-    cursor: pointer;
-    background: none;
-    border: 1px solid white;
-    border-radius: 0;
-    padding: 1vmax;
-    transition: all 0.5s;
-    width: 9vmax;
-    font: 500 1vmax 'Roboto';
-    border-radius: 6px;
-    color: white;
-}
-
-.banner> .bannerBox>a>button:hover {
-    background-color: tomato;
-    color: white;
-}
-
-/* .banner::after {
-    content: "";
-    width: 100vw;
-    height: 100vmin;
-    background-color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: 100%;
-    clip-path: polygon(100% 78%, 0% 100%, 100% 100%);
+/* .homeComponent{
+    background-color: rgb(235, 229, 229);
 } */
 
 .homeHeading {
     text-align: center;
     font-family: 'Roboto';
-    font-size: 1.4vmax;
+    font-size: 1.8vmax;
     border-bottom: 1px solid rgba(21, 21, 21, 0.5);
     width: 20vmax;
     margin: 5vmax auto;
@@ -83,7 +15,7 @@
 .container {
     display: flex;
     margin: 2vmax auto;
-    width: 80vw;
+    width: 90vw;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 100%;
@@ -169,114 +101,6 @@
     animation: ripple 0.6s linear infinite;
 }
 
-
-.allProductHead {
-    text-align: center;
-}
-
-.allProductHead button {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    outline: none;
-    border: 0;
-    vertical-align: middle;
-    text-decoration: none;
-    background: transparent;
-    padding: 0;
-    font-size: inherit;
-    font-family: inherit;
-}
-
-.allProductHead button.learn-more {
-    width: 14rem;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.allProductHead button.learn-more .circle {
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    position: relative;
-    display: block;
-    margin: 0;
-    width: 3rem;
-    height: 3rem;
-    /* background: #282936; */
-    background: rgb(201, 31, 201);
-    border-radius: 1.625rem;
-}
-
-.allProductHead button.learn-more .circle .icon {
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    background: #fff;
-}
-
-.allProductHead button.learn-more .circle .icon.arrow {
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    left: 0.625rem;
-    width: 1.125rem;
-    height: 0.125rem;
-    background: none;
-}
-
-.allProductHead button.learn-more .circle .icon.arrow::before {
-    position: absolute;
-    content: "";
-    top: -0.29rem;
-    right: 0.0625rem;
-    width: 0.625rem;
-    height: 0.625rem;
-    border-top: 0.125rem solid #fff;
-    border-right: 0.125rem solid #fff;
-    transform: rotate(45deg);
-}
-
-.allProductHead button.learn-more .button-text {
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 0.75rem 0;
-    margin: 0 0 0 1.85rem;
-    color: #282936;
-    font-weight: 500;
-    line-height: 1.6;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.allProductHead button:hover .circle {
-    width: 100%;
-}
-
-.allProductHead button:hover .circle .icon.arrow {
-    background: #fff;
-    transform: translate(1rem, 0);
-}
-
-.allProductHead button:hover .button-text {
-    color: #fff;
-}
-
-
-
-
-@keyframes ripple {
-    0% {
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
-    }
-
-    100% {
-        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
-    }
-}
-
 @media screen and (max-width: 900px) {
     .banner {
         display: block;
@@ -286,6 +110,9 @@
 }
 
 @media screen and (max-width: 600px) {
+    .container {
+        width: 100vw;
+    }
 
     .productCard>p {
         font-size: 1.7vmax;

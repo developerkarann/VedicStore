@@ -36,12 +36,10 @@ export default function NewProduct() {
 
 
     const categories = [
-        "Books",
-        "Spiritual",
+        "Scriptures",
+        "Spiritual Products",
+        "Idols",
         "Cloths",
-        "Laptop",
-        "Camera",
-        "Mobile",
     ];
 
     const createProductImageChange = (e) => {
@@ -96,8 +94,8 @@ export default function NewProduct() {
         if (success) {
             alert.success("Product Created")
             dispatch({ type: NEW_PRODUCT_RESET })
-            document.location.reload()
-            // navigate('/admin/dashboard')
+            // document.location.reload()
+            navigate('/admin/dashboard')
         }
 
     }, [navigate, isAuthenticated, error, alert, success])

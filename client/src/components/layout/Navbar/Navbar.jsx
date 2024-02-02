@@ -40,12 +40,13 @@ export default function Navbar() {
                         <button type='submit'><i class="fa-solid fa-magnifying-glass"></i></button>
                     </form> */}
                     <ul className="menu">
+                        <li ><p className="menu-btn nav-user">{user ? user.name : 'Welcome'}</p></li>
                         <li onClick={burger}><Link to="/" className="menu-btn">Home</Link></li>
                         <li onClick={burger}><Link to="/products" className="menu-btn">Products</Link></li>
                         <li onClick={burger}><Link to="/about" className="menu-btn">About</Link></li>
                         <li onClick={burger}><Link to="/contact" className="menu-btn">Contact</Link></li>
-                        <li onClick={burger}><Link to="/cart" className="menu-btn"><i class="fa-solid fa-cart-shopping"></i> Cart</Link></li>
-                        <li onClick={burger}><Link to="/account" className="menu-btn"><i class="fa-solid fa-user"></i> Account</Link></li>
+                        <li onClick={burger}><Link to="/cart" className="menu-btn"><i className="fa-solid fa-cart-shopping"></i> Cart</Link></li>
+                        <li onClick={burger}><Link to="/account" className="menu-btn"><i className="fa-solid fa-user"></i> {isAuthenticated ? 'Account': 'Login'}</Link></li>
                         {isAuthenticated && <UserOptions user={user} burger={burger} />}
                     </ul>
 

@@ -32,7 +32,7 @@ app.use('/api/v1', user)
 app.use('/api/v1', order)
 app.use('/api/v1', payment)
 
-app.use(express.static(path.join(__dirname, '../client/dist')))
+// app.use(express.static(path.join(__dirname, '../client/dist')))
 
 // app.get('*', (req, res) => {
 //    res.sendFile(path.resolve(__dirname, '../client/dist/index.html'))

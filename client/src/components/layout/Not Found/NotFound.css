@@ -10,13 +10,13 @@
 }
 .PageNotFound > svg {
   font-size: 7vmax;
-  color: tomato;
+  color: rgb(201, 31, 201);
 }
 .PageNotFound > p {
   font-size: 2vmax;
 }
 .PageNotFound > a {
-  background-color: rgb(51, 51, 51);
+  background-color: rgb(201, 31, 201);
   color: white;
   border: none;
   padding: 1vmax 3vmax;
@@ -24,6 +24,10 @@
   font: 400 1vmax "Roboto";
   text-decoration: none;
   margin: 2vmax;
+  border-radius: 4px;
+}
+.PageNotFound > a {
+  background-color: rgb(170, 28, 170);
 }
 
 @media screen and (max-width: 600px) {
