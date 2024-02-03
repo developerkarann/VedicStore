@@ -32,7 +32,7 @@ export default function Navbar() {
                 {/* {isAuthenticated && <UserOptions user={user} />} */}
                 <div className="max-width">
                     <div className="logo">
-                        <Link to="/"> <img src="./whitelogo.png" className='brandLogo' alt="" /> </Link>
+                        <Link to="/"> <img src="https://res.cloudinary.com/dnxuag27j/image/upload/v1706980502/assests/whitelogo_prmrwf.png" className='brandLogo' alt="" /> </Link>
 
                     </div>
                     <form className="searchBox" onSubmit={searchSubmitHandler}>

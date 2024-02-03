@@ -6,19 +6,19 @@ import { Link } from 'react-router-dom'
 export default function ProductsCategories() {
     const categories = [
         {
-            img: './assets/images/categories/scripture.jpg',
+            img: 'https://res.cloudinary.com/dnxuag27j/image/upload/v1706980528/assests/scripture_sj2zmo.jpg',
             name: 'Scriptures'
         },
         {
-            img: './assets/images/categories/spiritualProduct.jpg',
+            img: 'https://res.cloudinary.com/dnxuag27j/image/upload/v1706980528/assests/spiritualProduct_b6rkdy.jpg',
             name: 'Spiritual Products'
         },
         {
-            img: './assets/images/categories/idol.webp',
+            img: 'https://res.cloudinary.com/dnxuag27j/image/upload/v1706980527/assests/idol_vx3tua.webp',
             name: 'Idols'
         },
         {
-            img: './assets/images/categories/cloths.jpg',
+            img: 'https://res.cloudinary.com/dnxuag27j/image/upload/v1706980528/assests/cloths_mn3jor.jpg',
             name: 'Cloths'
         },
     ]

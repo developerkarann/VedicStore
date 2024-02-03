@@ -14,6 +14,7 @@
     transition: all 0.03 ease;
     padding: 0 0;
     filter: drop-shadow(3px 0px 10px #222);
+    
 }
 
 
@@ -96,6 +97,7 @@
     font: 300 1.1vmax 'Roboto';
     cursor: pointer;
     color: white;
+    height: 30px;
     transition: all 0.5s;
     border-radius: 0px 6px 6px 0px;
 }
@@ -145,11 +147,11 @@
         position: fixed;
         height: 100vh;
         width: 70%;
-        right: -100%;
-        top: 20px;
+        left: -100%;
+        top: 42px;
         background: rgb(201, 31, 201);
         text-align: center;
-        padding: 70px 0 0 0;
+        padding: 20px 0 0 0;
         transition: all 0.3s ease;
     }
 
@@ -162,7 +164,7 @@
     }
 
     .navbar .menu.active {
-        right: 0;
+        left: 0;
     }
 
     .navbar .menu li {
