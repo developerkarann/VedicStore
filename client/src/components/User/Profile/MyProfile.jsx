@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import MetaData from '../../layout/MetaData'
 import { useSelector } from 'react-redux'
 import Loader from '../../layout/loader/Loader'
+import SuccessUser from '../../layout/Success/SuccessUser'
 
 export default function MyProfile() {
 
@@ -21,29 +22,35 @@ export default function MyProfile() {
                 <>
                     <MetaData title={`${user && user.name}'s Profile`} />
 
-                    <div className="myProfile">
-                        <div class="card-container">
-                            <span class="pro">PROFILE</span>
-                            <img class="round" src={user && user.avatar.url} alt="user" />
-                            <h3>{user && user.name}</h3>
-                            <p>{String(user && user.createdAt).substring(0, 10)}</p>
-                            <h3>{user && user.email}</h3>
+                    {user ?
+                        <div className="myProfile">
+                            <div class="card-container">
+                                <span class="pro">PROFILE</span>
+                                <img class="round" src={user && user.avatar.url} alt="user" />
+                                <h3>{user && user.name}</h3>
+                                <p>{String(user && user.createdAt).substring(0, 10)}</p>
+                                <h3>{user && user.email}</h3>
 
-                            <div class="actions">
-                                <div class="buttons">
-                                    <button class="primary">
-                                        <Link to="/me/update">Edit Profile</Link>
-                                    </button>
-                                    <button class="primary ghost">
-                                        <Link to="/orders">My Orders</Link>
-                                    </button>
-                                    <button class="primary ghost">
-                                        <Link to="/password/update">Change Password</Link>
-                                    </button>
+                                <div class="actions">
+                                    <div class="buttons">
+                                        <button class="primary">
+                                            <Link to="/me/update">Edit Profile</Link>
+                                        </button>
+                                        <button class="primary ghost">
+                                            <Link to="/orders">My Orders</Link>
+                                        </button>
+                                        <button class="primary ghost">
+                                            <Link to="/password/update">Change Password</Link>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+
+                        :
+                      <SuccessUser/>
+                        
+                    }
                 </>
             )}
         </>

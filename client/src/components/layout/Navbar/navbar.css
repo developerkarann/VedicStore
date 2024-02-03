@@ -49,7 +49,7 @@
     font-size: 18px;
 }
 
-.nav-user{
+.nav-user {
     background-color: purple;
     padding: 15px;
     margin-bottom: 20px;
@@ -72,24 +72,23 @@
 
 
 .searchBox>input[type="text"] {
-    box-shadow: 0 0 10px white;
-    /* background-color: white; */
-    background: none;
+    box-shadow: 0 0 10px purple;
+    background-color: white;
     border: none;
-    /* color: rgba(0,0,0,0.637); */
-    color: white !important;
+    color: rgba(0, 0, 0, 0.637);
+    color: purple;
     padding: 1vmax 2vmax;
-    width: 500px;
+    width: 400px;
+    margin-left: 30px;
     outline: none;
-    border-radius: 0;
     font: 300 1.1vmax 'Roboto';
     box-sizing: border-box;
-    height: 20px;
+    height: 30px;
     border-radius: 6px 0 0 6px;
 }
 
 .searchBox>button {
-    box-shadow: 0 0 5px white;
+    box-shadow: 0 0 5px purple;
     border-radius: 0;
     background: none;
     border: none;
@@ -105,8 +104,33 @@
 /* Responsive Media Query */
 
 
+@media (max-width: 1350px) {
+    .searchBox>input[type="text"] {
+        width: 200px;
+    }
+}
+
+
+@media (max-width: 1050px) {
+    .searchBox>input[type="text"] {
+        visibility: 0;
+    }
+
+    .searchBox>button {
+        visibility: 0;
+    }
+}
+
 
 @media (max-width: 940px) {
+    .searchBox>input[type="text"] {
+       visibility: 1;
+       width: 40vw;
+    }
+
+    .searchBox>button {
+        visibility: 1;
+    }
 
     .menu-btn {
         display: block;
@@ -128,12 +152,13 @@
         padding: 70px 0 0 0;
         transition: all 0.3s ease;
     }
-    #user{
-         border: 1px solid black;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         text-align: center;
+
+    #user {
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
     .navbar .menu.active {
@@ -148,8 +173,9 @@
     .navbar .menu li a {
         display: inline-block;
         margin: 20px 0;
-        font-size: 25px;
+        font-size: 20px;
     }
+
     .navbar .menu li a i {
         font-size: 25px;
         margin-right: 5px;
@@ -169,4 +195,10 @@
     .navbar .logo .brandLogo {
         width: 100px;
     }
+    .searchBox>input[type="text"] {
+        width: 45vw;
+        margin-left: 0px;
+        /* height: 20px; */
+     }
+     
 }

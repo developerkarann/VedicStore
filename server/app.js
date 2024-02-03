@@ -7,12 +7,13 @@ const errorMiddleware = require('./middleware/error')
 const bodyParser = require('body-parser')
 const fileUpload = require('express-fileupload')
 
+
 // Routes Imports
 const product = require('./routes/productRoute')
 const user = require('./routes/userRoutes')
 const order = require('./routes/orderRoute')
 const payment = require('./routes/paymentRoute')
-const path = require('path')
+const contact = require('./routes/contactRoute')
 
 const app = express();
 
@@ -31,15 +32,7 @@ app.use('/api/v1', product)
 app.use('/api/v1', user)
 app.use('/api/v1', order)
 app.use('/api/v1', payment)
-
-// app.use(express.static(path.join(__dirname, '../client/dist')))
-
-// app.get('*', (req, res) => {
-//    res.sendFile(path.resolve(__dirname, '../client/dist/index.html'))
-// })
-// app.get('*', (req, res) => {
-//    res.send("<h1>Hello World</h>")
-// })
+app.use('/api/v1', contact)
 
 
 // Error Handling \ Middleware

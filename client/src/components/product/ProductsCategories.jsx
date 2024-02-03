@@ -6,15 +6,15 @@ import { Link } from 'react-router-dom'
 export default function ProductsCategories() {
     const categories = [
         {
-            img: './assets/images/categories/boss.webp',
+            img: './assets/images/categories/scripture.jpg',
             name: 'Scriptures'
         },
         {
-            img: './assets/images/categories/rudraksha.jpg',
+            img: './assets/images/categories/spiritualProduct.jpg',
             name: 'Spiritual Products'
         },
         {
-            img: './assets/images/categories/aadiyogi.webp',
+            img: './assets/images/categories/idol.webp',
             name: 'Idols'
         },
         {

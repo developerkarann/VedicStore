@@ -54,7 +54,7 @@ export default function LoginSignUp() {
         console.log(myForm)
         dispatch(register(myForm))
 
-        navigate("/account/success")
+        // navigate("/account/success")
         // setTimeout(() => {
         //     location.reload()
         // }, 6000);

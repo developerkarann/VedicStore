@@ -10,7 +10,7 @@ export default function SuccessUser() {
                 <CheckCircleIcon />
 
                 <Typography>Account Created Successfully </Typography>
-                <Link to="/">Home</Link>
+                <a href="/">Home</a>
             </div>
         </>
     )

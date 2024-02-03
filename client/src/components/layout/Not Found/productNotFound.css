@@ -1,0 +1,58 @@
+.ProductNotFound {
+    margin: auto;
+    /* text-align: center; */
+    /* padding: 10vmax; */
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+  }
+  .ProductNotFound > svg {
+    font-size: 7vmax;
+    color: rgb(201, 31, 201);
+  }
+  .ProductNotFound > p {
+    font-size: 2vmax;
+  }
+  .ProductNotFound > a {
+    background-color: rgb(201, 31, 201);
+    color: white;
+    border: none;
+    padding: 1vmax 3vmax;
+    cursor: pointer;
+    font: 400 1vmax "Roboto";
+    text-decoration: none;
+    margin: 2vmax;
+    border-radius: 4px;
+  }
+  .ProductNotFound > a {
+    background-color: rgb(170, 28, 170);
+  }
+  
+  @media screen and (max-width: 600px) {
+    .ProductNotFound {
+        margin: auto;
+        text-align: center;
+        padding: 5vmax 0;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    .ProductNotFound > a {
+      padding: 3vw 6vw;
+      font: 400 4vw "Roboto";
+      margin: 2vmax;
+
+    }
+  
+    .ProductNotFound > svg {
+      font-size: 20vw;
+    }
+    .ProductNotFound > p {
+      margin: 2vmax;
+      font-size: 5vw;
+    }
+  }
+  

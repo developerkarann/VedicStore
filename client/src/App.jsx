@@ -40,7 +40,7 @@ import NotFound from './components/layout/Not Found/NotFound'
 import MyProfile from './components/User/Profile/MyProfile'
 import Navbar from './components/layout/Navbar/Navbar'
 import NewFooter from './components/layout/footer/NewFooter'
-import SuccessUser from './components/layout/Success/SuccessUser'
+import ContactUs from './components/layout/Contact/ContactUs'
 
 
 
@@ -70,13 +70,12 @@ function App() {
         <Routes>
           <Route exact path='/' Component={Home} />
           <Route exact path='/about' Component={About} />
-          <Route exact path='/contact' Component={About} />
+          <Route exact path='/contact' Component={ContactUs} />
           <Route exact path='/products' Component={Products} />
           <Route exact path='/product/:id' Component={ProductDetails} />
           <Route path='/products/:keyword' Component={Products} />
           <Route exact path='/search' Component={Search} />
           <Route exact path='/login' Component={LoginSignUp} />
-          <Route exact path='/account/success' Component={SuccessUser} />
           <Route exact path='/account' Component={MyProfile} />
           <Route exact path='/me/update' Component={UpdateProfile} />
           <Route exact path='/password/update' Component={UpdatePassword} />

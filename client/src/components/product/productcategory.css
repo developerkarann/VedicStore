@@ -11,6 +11,7 @@
 .categoryContainer {
     display: flex;
     margin: 2vmax auto;
+    margin-top: 7vmax;
     width: 95vw;
     flex-wrap: wrap;
     justify-content: center;

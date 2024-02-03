@@ -35,10 +35,10 @@ export default function Navbar() {
                         <Link to="/"> <img src="./whitelogo.png" className='brandLogo' alt="" /> </Link>
 
                     </div>
-                    {/* <form className="searchBox" onSubmit={searchSubmitHandler}>
-                        <input type="text" placeholder='Search A Product' onChange={(e) => setKeyword(e.target.value)} />
+                    <form className="searchBox" onSubmit={searchSubmitHandler}>
+                        <input type="text" placeholder='Search ' onChange={(e) => setKeyword(e.target.value)} />
                         <button type='submit'><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </form> */}
+                    </form>
                     <ul className="menu">
                         <li ><p className="menu-btn nav-user">{user ? user.name : 'Welcome'}</p></li>
                         <li onClick={burger}><Link to="/" className="menu-btn">Home</Link></li>

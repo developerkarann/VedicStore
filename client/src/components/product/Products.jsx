@@ -11,6 +11,7 @@ import { Typography } from '@material-ui/core'
 import { useAlert } from 'react-alert'
 import MetaData from '../layout/MetaData'
 import ProductsCategories from './ProductsCategories'
+import ProductNotFound from '../layout/Not Found/ProductNotFound'
 export default function Products() {
 
     const dispatch = useDispatch()
@@ -42,15 +43,15 @@ export default function Products() {
     ];
     const cat = [
         {
-            img: './assets/images/categories/boss.webp',
+            img: './assets/images/categories/scripture.jpg',
             name: 'Scriptures'
         },
         {
-            img: './assets/images/categories/rudraksha.jpg',
+            img: './assets/images/categories/spiritualProduct.jpg',
             name: 'Spiritual Products'
         },
         {
-            img: './assets/images/categories/aadiyogi.webp',
+            img: './assets/images/categories/idol.webp',
             name: 'Idols'
         },
         {
@@ -87,16 +88,23 @@ export default function Products() {
 
 
                     <div className="products">
-                        {products &&
-                            products.map((product) => {
-                                return (
-                                    <ProductCard key={product._id} product={product} />
-                                )
-                            })}
+                        {
+                            products && products.length > 0 ?
+                                products.map((product) => {
+                                    return (
+                                        <ProductCard key={product._id} product={product} />
+                                    )
+                                })
+
+                                :
+                                <>
+                                   <ProductNotFound/>
+                                </>
+                        }
                     </div>
 
                     <div className="filterBox">
-                        <Typography>Categories</Typography>
+                        <Typography style={{ fontSize: '1.5vmax' }}>Categories</Typography>
                         <ul className='categoryBox'>
                             {categories.map((category) => {
                                 return (
@@ -105,7 +113,7 @@ export default function Products() {
                             })}
                         </ul>
 
-                        <fieldset>
+                        {/* <fieldset>
                             <Typography component="legend">Ratings</Typography>
                             <Slider
                                 value={ratings}
@@ -116,7 +124,7 @@ export default function Products() {
                                 valueLabelDisplay='auto'
                             >
                             </Slider>
-                        </fieldset>
+                        </fieldset> */}
                     </div>
 
                     {resultPerPage < productsCount && (

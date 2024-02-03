@@ -62,8 +62,6 @@ export const userReducer = (state = { user: {} }, action) => {
                 //NOTE > User showing null in State when registering user
             };
 
-        
-
         case LOGIN_FAIL:
         case REGISTER_FAIL:
             return {

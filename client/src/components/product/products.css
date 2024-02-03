@@ -49,7 +49,7 @@
 .page-link{
     text-decoration: none;
     color: rgb(80,80,80);
-    font: 300 0.8vmax 'Roboto';
+    font: 300 1vmax 'Roboto';
     transition: all 0.3s;
 }
 .page-item:hover{
@@ -59,7 +59,7 @@
     color: rgb(80,80,80);
 }
 .pageItemActive{
-    background-color: tomato;
+    background-color: rgb(201, 31, 201);
 }
 .pageLinkActive{
   color: white;
@@ -78,17 +78,17 @@
 }
 .category-link{
     list-style: none;
-    color: rgba(0, 0, 0, 0.61);
-    font: 400 0.9vmax "Roboto";
+    color: rgba(0, 0, 0, 0.733);
+    font: 400 1.1vmax "Roboto";
     margin: 0.4vmax;
     cursor: pointer;
 }
 .category-link:hover{
-    color: tomato;
+    color: rgb(201, 31, 201);
 }
 .filterBox > fieldset{
-    border: 1px solid rgba(0, 0, 0, 0.123);
-    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.226);
+    /* border: none; */
     
 }
 
@@ -108,7 +108,7 @@
         margin: auto;
     }
     .page-link{
-        font: 300 1.7vmax 'Roboto'
+        font: 300 1.8vmax 'Roboto'
     }
     .productsHeading{
         margin-top: 40px;
