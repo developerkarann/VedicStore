@@ -7,8 +7,8 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        // target: "https://vedicstore-server.vercel.app",
-        target: 'http://localhost:4000',
+        target: "https://vedicstore-server.vercel.app",
+        // target: 'http://localhost:4000',
         changeOrigin: true,
       },
     },
