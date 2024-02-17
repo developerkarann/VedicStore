@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './App.css'
 import WebFont from 'webfontloader'
 import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom'
-//Compnents
+// Compnents
 import Header from './components/layout/header/Header'
 import Footer from './components/layout/footer/Footer'
 import Home from './components/layout/home/Home'

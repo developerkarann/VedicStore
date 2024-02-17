@@ -9,7 +9,10 @@ lerna-debug.log*
 
 node_modules
 *.local
-.env
+*.env
+*.env.example
+*.env.local
+*.env.staging
 
 # Editor directories and files
 .vscode/*

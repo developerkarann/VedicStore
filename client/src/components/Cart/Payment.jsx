@@ -57,7 +57,7 @@ export default function Payment() {
         try {
             const config = { Headers: { "Content-Type": "application/json" }, withCredentials: true };
 
-            const { data } = await axios.post(`${backendServer}/api/v1/payment/process`, paymentData, config)
+            const { data } = await axios.post(`/api/v1/payment/process`, paymentData, config)
 
             const client_secret = data.client_secret;
 
@@ -96,7 +96,7 @@ export default function Payment() {
 
                     dispatch(createOrder(order))
 
-                    console.log(order)
+                    // console.log(order)
 
                     navigate('/success')
                 } else {
