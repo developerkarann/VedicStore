@@ -53,7 +53,7 @@ export default function Home() {
             <div className="container" id='container'>
               {products && products.map((data, index) => <ProductCard product={data} key={index} />)}
             </div>
-              <p onClick={viewAllProduct} style={{ cursor: 'pointer', textAlign:'center', marginBottom: '40px' }} >View All</p>
+              <p onClick={viewAllProduct} style={{ cursor: 'pointer', textAlign:'center', marginBottom: '40px', fontSize: '20px' }} > <i class="fa-solid fa-cart-shopping"></i> All Products</p>
 
 
           </div>

@@ -12,7 +12,7 @@ export default function ProductNotFound() {
                 {/* <h1>Product Not Found!</h1> */}
 
                 <Typography>Product Not Found !</Typography>
-                <Link to="/products">All Products</Link>
+                <a href="/products">All Products</a>
             </div>
         </>
     )

@@ -27,7 +27,7 @@
     flex-direction: column;
     text-decoration: none;
     color: rgb(48, 48, 48);
-    margin: 2vmax;
+    margin: 3vmax;
     transition: all 0.5s;
     padding-bottom: 0.5vmax;
 }
@@ -37,6 +37,7 @@
     max-width: 15vmax;
     height: 20vmax;
     max-height: 20vmax;
+    /* mix-blend-mode: color-dodge; */
 }
 
 .productCard>div {

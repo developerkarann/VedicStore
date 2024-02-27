@@ -1,24 +1,32 @@
-*{
-   margin:0;
-   scroll-behavior: smooth;    
+* {
+   margin: 0;
+   scroll-behavior: smooth;
 }
-body{
+
+body {
    cursor: url('./assets/image/cursor.png'), auto;
+   /* background-image: url('./assets/images/background/06.png'); */
+   /* background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover; */
 }
 
 /* Crome, Safari, Edge Opera */
 input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button{
+input::-webkit-inner-spin-button {
    -webkit-appearance: none;
    margin: 0;
 }
+
 /* Firefox */
-input[input="number"]{
+input[input="number"] {
    -moz-appearance: textfield;
 }
-.greenColor{
+
+.greenColor {
    color: green !important;
 }
-.redColor{
+
+.redColor {
    color: red !important;
 }

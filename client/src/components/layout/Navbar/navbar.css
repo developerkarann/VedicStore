@@ -10,11 +10,11 @@
     position: absolute;
     top: 0;
     width: 100%;
+    /* min-height: 65px; */
     z-index: 999;
     transition: all 0.03 ease;
     padding: 0 0;
-    filter: drop-shadow(3px 0px 10px #222);
-    
+    filter: drop-shadow(3px 0px 10px #222)
 }
 
 
@@ -124,7 +124,7 @@
 }
 
 
-@media (max-width: 940px) {
+@media (max-width: 1140px) {
     .searchBox>input[type="text"] {
        visibility: 1;
        width: 40vw;
@@ -148,7 +148,7 @@
         height: 100vh;
         width: 70%;
         left: -100%;
-        top: 42px;
+        top: 65px;
         background: rgb(201, 31, 201);
         text-align: center;
         padding: 20px 0 0 0;
@@ -189,6 +189,12 @@
 
 
 @media (max-width: 690px) {
+    .navbar {
+        padding: 11px 0;
+        top: 0;
+        width: 100%;
+        /* min-height: 65px; */
+    }
     .max-width {
         padding: 0 23px;
     }
@@ -197,7 +203,22 @@
         width: 100px;
     }
     .searchBox>input[type="text"] {
-        width: 45vw;
+        width: 58vw;
+        margin-left: 0px;
+        /* height: 20px; */
+     }
+     
+}
+@media (max-width: 500px) {
+    .max-width {
+        padding: 0 23px;
+    }
+
+    .navbar .logo .brandLogo {
+        width: 70px;
+    }
+    .searchBox>input[type="text"] {
+        width: 50vw;
         margin-left: 0px;
         /* height: 20px; */
      }

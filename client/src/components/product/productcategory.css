@@ -11,13 +11,14 @@
 .categoryContainer {
     display: flex;
     margin: 2vmax auto;
-    margin-top: 7vmax;
+    margin-top: 5.5vmax;
     width: 95vw;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 100%;
     /* background-color: rgb(236, 234, 234); */
 }
+
 .categoryCard {
     /* border: 1px solid red; */
     width: 10vmax;
@@ -44,6 +45,7 @@
     margin-bottom: 0;
     text-align: center;
 }
+
 .categoryCard:hover {
     box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
     transform: translateY(-1vmax);
@@ -54,11 +56,13 @@
 @media screen and (max-width: 750px) {
     .categoryContainer {
         width: 100vw;
+        margin-top: 7vmax;
     }
+
     .categoryCard {
         width: 5vmax;
     }
-    
+
     .categoryCard>img {
         width: 4vmax;
         height: 5vmax;

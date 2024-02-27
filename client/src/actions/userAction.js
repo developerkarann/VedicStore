@@ -233,6 +233,7 @@ export const updateUser = (id, userData) => async (dispatch) => {
 //Delete User --Admin
 export const deleteUser = (id) => async (dispatch) => {
     try {
+
         dispatch({ type: DELETE_USER_REQUEST });
 
         const { data } = await axios.delete(`/api/v1/admin/user/${id}`, config)

@@ -74,6 +74,7 @@ export const getAdminProducts = () => async (dispatch) => {
 // Create New Products --Admin
 export const createProduct = (productData) => async (dispatch) => {
     try {
+        console.log(productData)
         dispatch({ type: NEW_PRODUCT_REQUEST })
 
         const config = { Headers: { "Content-Type": "application/json" }, withCredentials: true };
@@ -95,6 +96,7 @@ export const createProduct = (productData) => async (dispatch) => {
 // Delete Product --Admin
 export const deleteProduct = (id) => async (dispatch) => {
     try {
+
         dispatch({ type: DELETE_PRODUCT_REQUEST })
 
         const config = { Headers: { "Content-Type": "application/json" }, withCredentials: true };

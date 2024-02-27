@@ -94,8 +94,10 @@ export default function NewProduct() {
         if (success) {
             alert.success("Product Created")
             dispatch({ type: NEW_PRODUCT_RESET })
-            // document.location.reload()
-            navigate('/admin/dashboard')
+            setTimeout(() => {
+                document.location.reload()
+            }, 1000);
+            // navigate('/admin/dashboard')
         }
 
     }, [navigate, isAuthenticated, error, alert, success])
@@ -160,7 +162,6 @@ export default function NewProduct() {
                         <Button id='createProductBtn' type='submit' disabled={loading ? true : false}>
                             Create Product
                         </Button>
-
 
                     </form>
                 </div>

@@ -101,8 +101,8 @@ exports.forgotPassword = CatchAsyncError(async (req, res, next) => {
 
     await user.save({ validateBeforeSave: false });
 
-    // const resetPasswordUrl = `${req.protocol}://${req.get("host")}/api/v1/password/reset/${resetToken}`
-    const resetPasswordUrl = `${process.env.FRONTEND_URL}/password/reset/${resetToken}`
+    const resetPasswordUrl = `${req.protocol}://${req.get("host")}/api/v1/password/reset/${resetToken}`
+    // const resetPasswordUrl = `${process.env.FRONTEND_URL}/password/reset/${resetToken}`
 
     const message = `Your password reset token is :- \n\n ${resetPasswordUrl} \n\n If you have not request this email then plaese ignore it`;
 
@@ -110,7 +110,7 @@ exports.forgotPassword = CatchAsyncError(async (req, res, next) => {
 
         await sendEmail({
             email: user.email,
-            subject: 'Ultimate E-commerce Password Recovery',
+            subject: 'Vedic Store Recovery Password! ',
             message,
         })
         res.status(200).json({
@@ -253,7 +253,7 @@ exports.getSingleUser = CatchAsyncError(async (req, res, next) => {
 
     const user = await User.findById(req.params.id);
     if (!user) {
-        return next(new ErrorHandler(`User does not exits with id: ${req.params.id}`))
+        return next(new ErrorHandler(`User does not exits with id: ${req.params.id}`, 400))
     }
     res.status(200).json({
         success: true,
@@ -287,7 +287,7 @@ exports.deleteUser = CatchAsyncError(async (req, res, next) => {
     const user = await User.findById(req.params.id);
 
     if (!user) {
-        return next(new ErrorHandler(`User does not exits with id: ${req.params.id}`))
+        return next(new ErrorHandler(`User does not exits with id: ${req.params.id}`, 400))
     }
     // remove clodinary
     const imageId = user.avatar.public_id;
@@ -298,7 +298,7 @@ exports.deleteUser = CatchAsyncError(async (req, res, next) => {
 
     res.status(200).json({
         // success: true,
-        message: 'User Deleted Successfully'
+        message: 'User Deleted Successfully!'
     })
 })
 
